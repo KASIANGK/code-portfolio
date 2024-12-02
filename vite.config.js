@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import fs from 'fs/promises';
-
 
 export default defineConfig({
   plugins: [react()],
-  base: '/code-portfolio/',
+  build: {
+    outDir: 'dist', // Répertoire où sera généré le build
+    assetsDir: 'assets', // Où mettre les fichiers statiques
+  },
+  base: '/code-portfolio/',  // Remplace par le nom de ton dépôt GitHub si nécessaire (ex: /mon-projet/)
 });
+
