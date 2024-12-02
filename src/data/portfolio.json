@@ -1,0 +1,60 @@
+{
+    "portfolio": [
+      {
+        "nom": "Projet 1",
+        "date": "2024-12-01",
+        "societe": "Entreprise A",
+        "image": "/assets/projet1-image.jpg",
+        "video": "/assets/projet1-video.mp4",
+        "backgroundimage": "/assets/projet1-background.jpg",
+        "programmes": "React, Node.js, MongoDB",
+        "frontend": "React, JavaScript",
+        "backend": "Node.js, Express"
+      },
+      {
+        "nom": "Projet 2",
+        "date": "2023-06-15",
+        "societe": "Entreprise B",
+        "image": "/assets/projet2-image.jpg",
+        "video": "/assets/projet2-video.mp4",
+        "backgroundimage": "/assets/projet2-background.jpg",
+        "programmes": "Vue.js, Firebase",
+        "frontend": "Vue.js",
+        "backend": "Firebase"
+      },
+      {
+        "nom": "Projet 3",
+        "date": "2023-06-15",
+        "societe": "Entreprise B",
+        "image": "/assets/projet2-image.jpg",
+        "video": "/assets/projet2-video.mp4",
+        "backgroundimage": "/assets/projet2-background.jpg",
+        "programmes": "Vue.js, Firebase",
+        "frontend": "Vue.js",
+        "backend": "Firebase"
+      },
+      {
+        "nom": "Projet 4",
+        "date": "2023-06-15",
+        "societe": "Entreprise B",
+        "image": "/assets/projet2-image.jpg",
+        "video": "/assets/projet2-video.mp4",
+        "backgroundimage": "/assets/projet2-background.jpg",
+        "programmes": "Vue.js, Firebase",
+        "frontend": "Vue.js",
+        "backend": "Firebase"
+      },
+      {
+        "nom": "Projet 5",
+        "date": "2023-06-15",
+        "societe": "Entreprise B",
+        "image": "/assets/projet2-image.jpg",
+        "video": "/assets/projet2-video.mp4",
+        "backgroundimage": "/assets/projet2-background.jpg",
+        "programmes": "Vue.js, Firebase",
+        "frontend": "Vue.js",
+        "backend": "Firebase"
+      }
+    ]
+  }
+  

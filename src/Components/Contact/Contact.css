@@ -1,0 +1,66 @@
+/* .video-ctc {
+    height: 900px;
+} */
+
+/* .contact-sect {
+    height: 700px;
+} */
+
+.contact-section {
+    position: relative;
+  }
+  
+  .contact-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+  }
+  
+  .contact-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-buttons img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .mail-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .popup-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background-color: #0056b3;
+  }
+  

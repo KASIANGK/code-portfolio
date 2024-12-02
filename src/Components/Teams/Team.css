@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .section:hover .card__inner {
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .section:hover .card__img .img__athlete img {
+    transform: scale(1.2);
+  }
+  
+  .section:hover .card__text a {
+    color: red;
+  }
+  
+  @keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px 0 hsl(240, 100%, 50%);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px hsl(240, 100%, 50%);
+    }
+  }
+  
+  .card__img .img__athlete img {
+    width: 120%;
+    transition: transform 0.3s ease;
+  }
+  
+  .card__img .img__athlete:hover img {
+    transform: scale(1.2);
+  }
+  
+  .players_list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  
+  .players_list_deux {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .players_list section {
+    margin-bottom: 3%;
+    width: 400px;
+  }
+  
+  .titleCard {
+    color: white;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    font-size: 2em;
+  }
+  
+  .boutonsPlayers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+  
+  body {
+    font-family: "Exo", sans-serif;
+    margin: 0;
+  }
+  
+  .players_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(10, 10, 26);
+    align-items: center;
+    gap: 5%;
+  }
+  
+  section {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+  }
+  
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+  .card-list {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .card__border,
+  .card__border-line,
+  .card__inner {
+    -webkit-clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+  }
+  
+  .card {
+    -webkit-filter: drop-shadow(0px 0px 5px var(--color)) drop-shadow(0px 0px 15px var(--color));
+    filter: drop-shadow(0px 0px 5px var(--color)) drop-shadow(0px 0px 15px var(--color));
+    position: relative;
+    /* width: 350px;
+    height: 200px; */
+    width: 300px;
+    margin: auto;
+  }
+  
+  .card__border {
+    position: absolute;
+    width: 98%;
+    height: 102%;
+    background: var(--color);
+    left: 1%;
+    top: 1%;
+    
+  }
+  
+  .card__border-line {
+    position: absolute;
+    width: 95%;
+    height: 99%;
+    left: 2.5%;
+    top: 2.5%;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, hsl(42, 90%, 72%)), color-stop(70%, hsl(0, 0%, 0%)));
+    background: linear-gradient(to bottom, hsl(42, 90%, 72%) 33%, hsl(0, 0%, 0%) 70%);
+  }
+  
+  .card__inner {
+    background: -webkit-linear-gradient(179deg, var(--color), #e3a83b 90%);
+    background: linear-gradient(179deg, var(--color), #e3a83b 90%);
+    padding: 0.5rem 0.2rem 0rem;
+    width: 92%;
+    margin-top: 4.8%;
+    margin-left: 4%;
+    padding: 15px;
+  }
+  
+  .card__img {
+    display: flex;
+    padding: 0 1rem;
+    background: repeating-linear-gradient(126deg, hsla(0, 0%, 100%, 0.219) 0%, #ffffff57 1.2%, transparent 1.19%, transparent 4%, transparent 4.1%);
+  }
+  
+  @media screen and (max-width: 550px) {
+    .card__img {
+        padding: 0 0.2rem;
+    }
+  }
+  
+  .img__team {
+    display: flex;
+    background: hsla(0, 0%, 0%, 0.82);
+    display: flex;
+    padding: 0.3rem;
+    align-items: center;
+    padding-top: 15%;
+  }
+  
+  .img__team p {
+    font-size: 2em;
+  }
+  
+  .img__athlete {
+    flex: 1 1 75%;
+    padding-top: 8%;
+  }
+  
+  .img__athlete img {
+    width: 120%;
+    object-fit: cover;
+    object-position: top;
+    margin-left: -11%;
+  }
+  
+  .card__type {
+    width: min-content;
+    margin: auto;
+    padding: 0 10%;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-top: -6;}
+  
+  .teams_list_deux {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+  }
+  
+  .titleT {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .teams_list {
+    margin-top: 10%;
+  }
+  
+  .teams {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+  
+  @media only screen and (max-width: 425px) {
+  
+    .teams_list {
+        margin-top: 30%;
+    }
+  }

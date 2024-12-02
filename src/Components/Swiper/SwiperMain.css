@@ -1,0 +1,179 @@
+.home {
+    width: 100%;
+}
+
+.video-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+  width: 100vw;
+  
+}
+.home-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Styles par défaut - Dark Mode */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root.dark-mode {
+  background-color: rgb(0, 0, 0); 
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  /* min-height: 100vh; */
+  background-color: rgb(0, 0, 0); 
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87); 
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+
+
+/* Styles pour le Light Mode */
+
+#root.light-mode {
+  background-color: rgb(216, 216, 216); 
+}
+body.light-mode {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #e2e2e2
+}
+
+body.light-mode a {
+  color: rgba(0, 0, 0, 0.87); 
+}
+
+body.light-mode a:hover {
+  color: #ff5100;
+}
+
+body.light-mode button {
+  background-color: #e1e1e1;  
+  color: rgba(0, 0, 0, 0.87); 
+}
+
+body.light-mode button:hover {
+  background-color: #e0e0e0; 
+}
+
+.content-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+}
+.video-container {
+  position: relative; /* Nécessaire pour le positionnement de l'icône */
+}
+.video-container {
+  width: 100%;
+  max-height: 700px; 
+  display: flex;
+  justify-content: center; /* Centre horizontalement le contenu de la vidéo */
+  align-items: center; /* Centre verticalement le contenu de la vidéo */
+}
+.main-video {
+  width: 100%; /* Vidéo prend toute la largeur disponible */
+  /* max-height: 1100px;  */
+  object-fit: cover; /* Assure que la vidéo remplit son conteneur sans se déformer */
+}
+.navigate-icon {
+  position: absolute; /* Positionnement absolu par rapport au conteneur */
+  right: 20px; /* Espace depuis la droite */
+  top: 50%; /* Centrer verticalement */
+  transform: translateY(-50%); /* Ajuster pour centrer parfaitement */
+  font-size: 40px; /* Taille de l'icône */
+  color: #8a86e4; /* Couleur de l'icône */
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition douce pour la couleur, la transformation et l'ombre */
+}
+
+.navigate-icon:hover {
+  color: #2aec98; /* Couleur lumineuse au survol */
+}
+
+.navigate-icon.clicked {
+  color: #2aec98; /* Couleur lumineuse au clic */
+  animation: glow 0.3s ease-out forwards; /* Appeler l'animation glow */
+}
+
+/* Animation pour l'effet lumineux */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #2aec98, 0 0 10px #2aec98, 0 0 15px #2aec98;
+  }
+  100% {
+    text-shadow: 0 0 10px #2aec98, 0 0 20px #2aec98, 0 0 30px #2aec98;
+  }
+}
+
+
+.swiper {
+  height: 850px;
+}
+
+.all {
+  width: 100%;
+}
+
+.swiper-slide {
+  height: 100%; /* Chaque slide prend 100% de la hauteur du swiper */
+}
+.swiper-slide div {
+  max-height: 100%;
+  overflow: hidden; /* Ou "scroll" si tu veux permettre un défilement interne */
+}

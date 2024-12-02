@@ -1,0 +1,123 @@
+.home {
+    width: 100%;
+}
+.main-video-portfolio {
+  width: 41%;
+  padding-top: 5%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+.video-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  height: 700px;
+}
+.home-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.video-container-all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles par défaut - Dark Mode */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root.dark-mode {
+  background-color: rgb(0, 0, 0); 
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  /* min-height: 100vh; */
+  background-color: rgb(0, 0, 0); 
+  color: rgba(255, 255, 255, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87); 
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+
+
+/* Styles pour le Light Mode */
+
+#root.light-mode {
+  background-color: rgb(216, 216, 216); 
+}
+body.light-mode {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #e2e2e2
+}
+
+body.light-mode a {
+  color: rgba(0, 0, 0, 0.87); 
+}
+
+body.light-mode a:hover {
+  color: #ff5100;
+}
+
+body.light-mode button {
+  background-color: #e1e1e1;  
+  color: rgba(0, 0, 0, 0.87); 
+}
+
+body.light-mode button:hover {
+  background-color: #e0e0e0; 
+}
+
+
+
+
