@@ -10,6 +10,7 @@ import "swiper/css/mousewheel";
 import { Navigation, Pagination, Mousewheel } from 'swiper/modules'; 
 import Players from '../Players/Players';
 import AboutPresentation from './AboutSlides/AboutPresentation';
+import AboutSkills from './AboutSlides/AboutSkills'
 
 function About() {
   const [loading, setLoading] = useState(false);
@@ -47,6 +48,10 @@ function About() {
           <SwiperSlide>
               {/* <Players></Players> */}
               <AboutPresentation></AboutPresentation>
+          </SwiperSlide>
+          <SwiperSlide>
+              {/* <Players></Players> */}
+              <AboutSkills></AboutSkills>
           </SwiperSlide>
         </Swiper>
       </div>

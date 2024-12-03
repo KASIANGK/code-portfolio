@@ -72,7 +72,7 @@ function Navbar() {
         <li><Link to="/portfolio"><img src={portfolio} alt="Portfolio" className="navbar-logo-gif" /></Link></li>
         <li><Link to="/about"><img src={about} alt="About" className="navbar-logo-gif" /></Link></li>
 
-        <li className="navbar-lang">
+        {/* <li className="navbar-lang">
           <button onClick={toggleLangMenu} className="lang-button"><img src={siri} alt="Language" className="navbar-logo-gif" /></button>
           <div className={`lang-menu ${isLangMenuOpen ? 'open' : ''}`}>
             <p><a href="#">🇫🇷</a></p>
@@ -80,7 +80,7 @@ function Navbar() {
             <p><a href="#">🇵🇱</a></p>
             <p><a href="#">🇳🇱</a></p>
           </div>
-        </li>
+        </li> */}
         <li>
           <div className="body">
             <div id="background"></div>

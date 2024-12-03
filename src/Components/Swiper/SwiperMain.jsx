@@ -11,7 +11,7 @@ import { Navigation, Pagination, Mousewheel } from 'swiper/modules'; // Ajouter 
 
 function SwiperMain() {
   return (
-    <div className="content-container">
+    <div className="content-containerr">
       <Swiper
         pagination={{ clickable: true }}
         spaceBetween={7}

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.css'; 
-import darkModeVideo from '../../assets/desktopOGG.mp4';
+import darkModeVideo from '../../assets/desktopOGGGG.mp4';
 import lightModeVideo from '../../assets/Automatic.mp4';
 import { useTheme } from '../../ThemeContext'; 
 
@@ -14,7 +14,9 @@ function Contact() {
   const { isLightMode } = useTheme();
   
   const [showMailPopup, setShowMailPopup] = useState(false);
+  const [showPhonePopup, setShowPhonePopup] = useState(false); // Ajout de l'état pour le pop-up téléphone
   const [email, setEmail] = useState('ngk.kasia@gmail.com'); // Remplacez par votre propre adresse email
+  const phoneNumber = '0032 472 84 56 12'; // Votre numéro de téléphone
 
   const currentVideo = isLightMode ? lightModeVideo : darkModeVideo;
 
@@ -22,13 +24,24 @@ function Contact() {
     setShowMailPopup(true);
   };
 
+  const handlePhoneClick = () => {
+    setShowPhonePopup(true); // Ouvre le pop-up téléphone
+  };
+
   const handleClosePopup = () => {
     setShowMailPopup(false);
+    setShowPhonePopup(false); // Ferme les deux pop-ups
   };
 
   const handleSendMail = () => {
     window.location.href = `mailto:${email}`;
     setShowMailPopup(false);
+  };
+
+  const handleCallFaceTime = () => {
+    // Redirection vers FaceTime (iOS, macOS)
+    window.location.href = `facetime:${phoneNumber}`;
+    setShowPhonePopup(false);
   };
 
   useEffect(() => {
@@ -55,7 +68,6 @@ function Contact() {
         );
 
         // Ajuster la lecture de la vidéo en fonction du pourcentage
-        // Progression de la vidéo en fonction du défilement
         video.currentTime = progress * video.duration;
       }
     };
@@ -89,7 +101,7 @@ function Contact() {
         <button onClick={handleMailClick}>
           <img src={mailIcon} alt="Email" />
         </button>
-        <button onClick={() => window.location.href = 'tel:+1234567890'}>
+        <button onClick={handlePhoneClick}> {/* Ouvre le pop-up téléphone */}
           <img src={phoneIcon} alt="Phone" />
         </button>
       </div>
@@ -104,12 +116,22 @@ function Contact() {
           </div>
         </div>
       )}
+
+      {/* Popup pour le téléphone */}
+      {showPhonePopup && (
+        <div className="phone-popup">
+          <div className="popup-content">
+            <p>Numéro de téléphone: {phoneNumber}</p>
+            <button onClick={handleCallFaceTime}>Appeler via FaceTime</button>
+            <button onClick={handleClosePopup}>Fermer</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default Contact;
-
 
 
 
