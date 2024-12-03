@@ -42,7 +42,7 @@ body.dark-mode {
   width: 100vw;
   height: auto;
   /* min-height: 100vh; */
-  background-color: rgb(0, 0, 0); 
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(25, 15, 20));
   color: rgba(255, 255, 255, 0.87);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }

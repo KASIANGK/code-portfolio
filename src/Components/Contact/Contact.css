@@ -48,6 +48,7 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    z-index: 300;
   }
   
   .popup-content button {
@@ -64,3 +65,44 @@
     background-color: #0056b3;
   }
   
+.popup-content p {
+  color: #0056b3;
+}
+
+
+
+.phone-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.popup-content button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #f1f1f1;
+}

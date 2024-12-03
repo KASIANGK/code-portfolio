@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Team.css';
+import './Teams.css';
 import teamImage from '../../assets/about.png'; // Chemin relatif depuis le fichier
 
 const Team = () => {

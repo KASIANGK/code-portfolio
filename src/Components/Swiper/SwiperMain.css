@@ -116,6 +116,18 @@ body.light-mode button:hover {
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
 }
+/* Media query pour max-width: 768px et hauteur max: 400px */
+@media (max-width: 768px){
+  .content-container {
+    height: 600px; /* Limite la hauteur à 400px */
+  }
+}
+@media (max-width: 768px){
+  .swiper-slide {
+    height: 400px; /* Limite la hauteur à 400px */
+  }
+}
+
 .video-container {
   position: relative; /* Nécessaire pour le positionnement de l'icône */
 }

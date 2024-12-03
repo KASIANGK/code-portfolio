@@ -51,7 +51,7 @@ const Portfolio = () => {
             <div className="content-container">
               <div className='btns-portfolio'>
                 <div className="buttons-container-first">
-                  <Link to="/team" className="portfolio-button"></Link>
+                  <Link to="/general" className="portfolio-button"></Link>
                   {/* <div className="hover-image-first">
                     <img src={teamHoverImage} alt="Team Hover" />
                   </div> */}
