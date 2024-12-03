@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
-// vite.config.js
-export default {
-  build: {
-    rollupOptions: {
-      external: ['react-router-dom'],
-    },
+export default defineConfig({
+  resolve: {
+    alias: {
+      axios: 'node_modules/axios/dist/axios.min.js',
+      // autres alias si nécessaire
+    }
   },
-}
-
+  plugins: [
+    // Autres plugins nécessaires pour Vite
+  ]
+});

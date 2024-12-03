@@ -1,5 +1,5 @@
 /**
- * Swiper Custom Element 11.1.14
+ * Swiper Custom Element 11.1.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: September 12, 2024
+ * Released on: November 18, 2024
  */
 
 (function () {
@@ -4410,7 +4410,7 @@
     let loopNeedDestroy;
     let loopNeedEnable;
     let loopNeedReloop;
-    if (changedParams.includes('thumbs') && passedParams.thumbs && passedParams.thumbs.swiper && currentParams.thumbs && !currentParams.thumbs.swiper) {
+    if (changedParams.includes('thumbs') && passedParams.thumbs && passedParams.thumbs.swiper && !passedParams.thumbs.swiper.destroyed && currentParams.thumbs && (!currentParams.thumbs.swiper || currentParams.thumbs.swiper.destroyed)) {
       needThumbsInit = true;
     }
     if (changedParams.includes('controller') && passedParams.controller && passedParams.controller.control && currentParams.controller && !currentParams.controller.control) {
@@ -4658,7 +4658,7 @@
   }
 
   /**
-   * Swiper Custom Element 11.1.14
+   * Swiper Custom Element 11.1.15
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
@@ -4666,7 +4666,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: September 12, 2024
+   * Released on: November 18, 2024
    */
 
 
