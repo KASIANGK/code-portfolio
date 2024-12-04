@@ -26,20 +26,30 @@ function AboutSkills() {
     { name: 'Three.js', level: 65, description: 'Bibliothèque JavaScript pour la création de graphismes 3D.', category: 'Bibliothèques' },
   ];
 
-  // État pour le filtre de catégorie et la page actuelle
+  // État pour le filtre de catégorie, la recherche et la page actuelle
   const [categoryFilter, setCategoryFilter] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const skillsPerPage = 4; // Nombre de compétences par page
 
-  // Fonction pour filtrer les compétences par catégorie et par recherche
+  // Filtrer les compétences par catégorie et par recherche
   const filteredSkills = skills.filter(skill => {
     const matchesCategory = categoryFilter === 'All' || skill.category === categoryFilter;
     const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
+  // Calculer les indices des compétences à afficher pour la page actuelle
+  const indexOfLastSkill = currentPage * skillsPerPage;
+  const indexOfFirstSkill = indexOfLastSkill - skillsPerPage;
+  const currentSkills = filteredSkills.slice(indexOfFirstSkill, indexOfLastSkill);
+
+  // Calculer le nombre total de pages
+  const totalPages = Math.ceil(filteredSkills.length / skillsPerPage);
+
   // Fonction pour afficher les étoiles en fonction du niveau
   const renderStars = (level) => {
-    const maxStars = 5; // Nombre d'étoiles maximum
+    const maxStars = 5;
     const filledStars = Math.round(level / 20); // Calculer le nombre d'étoiles pleines, 20% par étoile
 
     let stars = [];
@@ -47,38 +57,41 @@ function AboutSkills() {
       stars.push(i < filledStars ? '★' : '☆'); // Étoiles pleines ou vides
     }
 
-    return stars.join(''); // Affiche les étoiles
+    return stars.join('');
+  };
+
+  // Fonction pour changer de page
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   return (
     <div className="about-skills">
-      <h1>My Skills</h1>
+      <div className='search-filter'>
+        {/* Barre de recherche */}
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search by skill name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
 
-      {/* Barre de recherche */}
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search by skill name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        {/* Filtre des compétences */}
+        <div className="category-filter">
+          <button onClick={() => setCategoryFilter('All')}>All</button>
+          <button onClick={() => setCategoryFilter('Frontend')}>Frontend</button>
+          <button onClick={() => setCategoryFilter('Backend')}>Backend</button>
+          <button onClick={() => setCategoryFilter('Logiciels')}>Logiciels</button>
+          <button onClick={() => setCategoryFilter('Bibliothèques')}>Bibliothèques</button>
+        </div>
       </div>
-
-      {/* Filtre des compétences */}
-      <div className="category-filter">
-        <button onClick={() => setCategoryFilter('All')}>All</button>
-        <button onClick={() => setCategoryFilter('Frontend')}>Frontend</button>
-        <button onClick={() => setCategoryFilter('Backend')}>Backend</button>
-        <button onClick={() => setCategoryFilter('Logiciels')}>Logiciels</button>
-        <button onClick={() => setCategoryFilter('Bibliothèques')}>Bibliothèques</button>
-      </div>
-
       {/* Affichage des compétences filtrées */}
       <div className="skills-container">
-        {filteredSkills.map((skill, index) => (
+        {currentSkills.map((skill, index) => (
           <div key={index} className="skill-card">
             <h2>{skill.name}</h2>
-            <p>{skill.description}</p>
 
             {/* Affichage des étoiles */}
             <div className="skill-stars">
@@ -86,6 +99,21 @@ function AboutSkills() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Pagination */}
+      <div className="pagination">
+        <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>Previous</button>
+        {[...Array(totalPages)].map((_, index) => (
+          <button
+            key={index}
+            onClick={() => paginate(index + 1)}
+            className={currentPage === index + 1 ? 'active' : ''}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button onClick={() => paginate(currentPage + 1)} disabled={currentPage === totalPages}>Next</button>
       </div>
     </div>
   );

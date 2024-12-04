@@ -168,15 +168,25 @@ body.light-mode button:hover {
   }
 }
 
-
+.swiper {
+  height: 850px;
+}
+.swiper-slide {
+  height: 100%; 
+}
+.swiper-slide div {
+  max-height: 100%;
+  overflow: hidden; 
+}
+/* 
 .swiper {
   height: 850px;
 }
 
 .swiper-slide {
-  height: 100%; /* Chaque slide prend 100% de la hauteur du swiper */
+  height: 100%; 
 }
 .swiper-slide div {
   max-height: 100%;
-  overflow: hidden; /* Ou "scroll" si tu veux permettre un défilement interne */
-}
+  overflow: hidden; 
+} */

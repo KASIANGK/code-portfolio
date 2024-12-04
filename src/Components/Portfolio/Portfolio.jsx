@@ -64,7 +64,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <video
-                className="main-video video-hey"
+                className="main-video main-video-portfolio"
                 autoPlay
                 muted
               >
