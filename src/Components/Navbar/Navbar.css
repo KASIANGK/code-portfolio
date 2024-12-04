@@ -12,8 +12,12 @@
 
 .navbar-logo-gif {
   width: 50px;
-}
 
+}
+.navbar-logo-gif-about {
+  width: 45px;
+
+}
 .navbar-logo {
   color: #fff;
   font-size: 24px;
@@ -34,7 +38,10 @@
 }
 
 .navbar-links li {
-  margin-left: 30px;
+  margin-left: 40px;
+}
+.navbar-links .body {
+  margin-left: -30px;
 }
 
 .navbar-links a {

@@ -27,8 +27,8 @@
   }
   
   .contact-buttons img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
   
   .mail-popup {
@@ -103,4 +103,61 @@
 
 .popup-content button:hover {
   background-color: #45a049;
+}
+
+
+.ctc-me {
+  z-index: 3000;
+}
+
+
+
+
+
+
+
+
+.contact-section {
+  position: relative; /* Important pour que les éléments absolus à l'intérieur soient placés par rapport à cette section */
+}
+
+.ctc-me {
+  position: absolute; /* Permet de positionner la div en haut de la section */
+  top: 0; /* La div sera placée tout en haut de la section */
+  left: 0; /* Alignée à gauche */
+  width: 100%; /* Prend toute la largeur de la section */
+  background-color: #5500ff; /* Fond bleu */
+  color: white; /* Texte blanc */
+  font-size: 1.5em; /* Taille du texte */
+  text-align: center; /* Centre le texte */
+  padding: 10px 0; /* Un peu de padding pour espacer le texte */
+  font-weight: bold; /* Gras pour le texte */
+  z-index: 1000; /* Assure que la div est au-dessus des autres éléments */
+}
+
+.main-video {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 60px; /* Ajouté pour donner un peu d'espace entre le texte et la vidéo */
+}
+.video-ctc {
+  margin-top: -18px !important;
+}
+
+
+.ctc-me {
+  cursor: pointer; /* Ajoute un curseur pointer pour montrer que c'est cliquable */
+  background-color: #0062ff; /* Fond bleu */
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px; /* Ajoute un petit espace avant la vidéo */
+}
+
+.main-video {
+  width: 100%;
+  object-fit: cover;
 }

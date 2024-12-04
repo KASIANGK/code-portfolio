@@ -63,14 +63,14 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">
-          <img src={logo} alt="Logo" className="navbar-logo-gif" />
+          <img src={logo} alt="Home" title="Home" className="navbar-logo-gif" />
         </Link>
         <p></p>
       </div>
       <ul className="navbar-links">
         {/* <li><Link to="/">Home</Link></li> */}
-        <li><Link to="/portfolio"><img src={portfolio} alt="Portfolio" className="navbar-logo-gif" /></Link></li>
-        <li><Link to="/about"><img src={about} alt="About" className="navbar-logo-gif" /></Link></li>
+        <li><Link to="/portfolio"><img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" /></Link></li>
+        <li><Link to="/about"><img src={about} alt="About" className="navbar-logo-gif-about" title="About"/></Link></li>
 
         {/* <li className="navbar-lang">
           <button onClick={toggleLangMenu} className="lang-button"><img src={siri} alt="Language" className="navbar-logo-gif" /></button>

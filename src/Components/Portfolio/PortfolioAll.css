@@ -121,3 +121,24 @@ body.light-mode button:hover {
 
 
 
+/* @media (min-width: 768px) {
+  .content-container-portfolio {
+    height: 400px !important;
+  }
+} */
+/* @media (max-width: 1024px) {
+  .portfolio-haut {
+    margin-top: -40% !important;
+  }
+} */
+@media (max-width: 1024px) {
+  .portfolio-haut {
+    margin-top: -20% !important;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-haut {
+    margin-top: -10% !important;
+    height: 100vh !important;
+  }
+}

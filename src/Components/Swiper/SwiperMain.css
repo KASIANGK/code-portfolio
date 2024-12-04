@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 700px;
+  height: auto;
   width: 100vw;
   
 }
@@ -18,124 +18,15 @@
   flex-direction: column;
 }
 
-/* Styles par défaut - Dark Mode */
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-#root.dark-mode {
-  background-color: rgb(0, 0, 0); 
-}
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body.dark-mode {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: auto;
-  /* min-height: 100vh; */
-  background-color: rgb(0, 0, 0); 
-  color: rgba(255, 255, 255, 0.87);
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  color: rgba(255, 255, 255, 0.87); 
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
-}
-
-
-
-/* Styles pour le Light Mode */
-
-#root.light-mode {
-  background-color: rgb(216, 216, 216); 
-}
-body.light-mode {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #e2e2e2
-}
-
-body.light-mode a {
-  color: rgba(0, 0, 0, 0.87); 
-}
-
-body.light-mode a:hover {
-  color: #ff5100;
-}
-
-body.light-mode button {
-  background-color: #e1e1e1;  
-  color: rgba(0, 0, 0, 0.87); 
-}
-
-body.light-mode button:hover {
-  background-color: #e0e0e0; 
-}
 
 .content-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
 }
-/* Media query pour max-width: 768px et hauteur max: 400px */
-/* @media (max-width: 768px){
-  .content-container {
-    height: 600px !important; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media (max-width: 768px){
-  .swiper-slide {
-    height: 400px; 
-  }
-} */
-/* @media (max-width: 768px){
-  .main-video {
-    bottom: 300px !important; 
-  }
-} */
+
 .video-container {
   position: relative; /* Nécessaire pour le positionnement de l'icône */
 }
@@ -191,9 +82,162 @@ body.light-mode button:hover {
 }
 
 .swiper-slide {
-  height: 100%; /* Chaque slide prend 100% de la hauteur du swiper */
+  height: 100%; 
 }
 .swiper-slide div {
   max-height: 100%;
-  overflow: hidden; /* Ou "scroll" si tu veux permettre un défilement interne */
+  overflow: hidden; 
 }
+@media (max-width: 768px) {
+  .swiper {
+    height: 500px;  /* Assure que la hauteur du swiper reste pleine même sur les petits écrans */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .swiper {
+    height: 300px;
+    margin: 0 !important;  /* Assure que la hauteur du swiper reste pleine même sur les petits écrans */
+  }
+}
+
+
+
+
+
+
+/* 
+.swiper-wrapper {
+  height: 300px;
+} */
+/* Container principal du Swiper */
+.content-containerr {
+  width: 100%;
+  display: flex;
+  /* margin-top: 5%; */
+  min-height: 300px;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center;     /* Centrer verticalement */
+  overflow: hidden;  /* Assurer qu'il n'y ait pas de débordement */
+}
+@media (max-width: 768px) {
+  .content-containerr {
+    height: 200px;  /* Assure que la hauteur du swiper reste pleine même sur les petits écrans */
+  }
+}
+@media (max-width: 1024px) {
+  .content-containerr {
+    height: 470px;  /* Assure que la hauteur du swiper reste pleine même sur les petits écrans */
+  }
+}
+/* Modifications pour Swiper */
+.swiper {
+  width: 100%;
+  height: 100%; /* Le swiper prend toute la hauteur du conteneur */
+  position: relative; /* Pour s'assurer que les boutons de navigation sont positionnés par rapport à ce conteneur */
+  display: flex;
+}
+
+/* Slide avec ajustement de la taille */
+.swiper-slide {
+  height: 100%;  /* 100% de la hauteur du Swiper */
+  width: 100vw;  /* 100% de la largeur de la fenêtre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Suppression de l'espace entre les slides */
+  margin: 0;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+
+
+  .video-container {
+    height: 100vh;  /* Vidéo occupe toute la hauteur sur petits écrans */
+    width: 100vw;   /* Vidéo occupe toute la largeur */
+  }
+
+  .main-video {
+    object-fit: cover; /* Remplir l'espace sans déformer */
+  }
+
+  .video-div {
+    height: 100vh;  /* Pleine hauteur de l'écran */
+    width: 100vw;   /* Pleine largeur de l'écran */
+  }
+
+  /* Boutons de navigation visibles sur mobile */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block !important;  /* S'assurer qu'ils sont visibles */
+    z-index: 10;  /* Au-dessus du contenu */
+    color: white; /* Ou la couleur que tu veux */
+    font-size: 30px;  /* Taille des icônes */
+    opacity: 1 !important;  /* Assurer qu'ils sont visibles */
+  }
+
+  /* Si le Swiper utilise des icônes par défaut */
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+}
+
+/* Pour les écrans très petits (comme les téléphones portrait) */
+@media (max-width: 480px) {
+
+
+  .video-container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .main-video {
+    object-fit: cover; /* Remplir l'espace sans déformer */
+  }
+}
+/* S'assurer que les boutons sont visibles et au-dessus du contenu */
+.swiper-button-next,
+.swiper-button-prev {
+  display: block !important;  /* S'assurer qu'ils sont visibles */
+  z-index: 10;  /* Au-dessus du contenu */
+  color: white; /* ou la couleur que tu souhaites */
+  font-size: 30px; /* Taille des icônes */
+  opacity: 1 !important;  /* Assurer qu'ils sont visibles */
+  transition: opacity 0.3s ease;
+}
+
+/* Position des boutons dans le Swiper */
+.swiper-button-next {
+  right: 20px;  /* Positionnement du bouton suivant */
+}
+
+.swiper-button-prev {
+  left: 20px;  /* Positionnement du bouton précédent */
+}
+
+/* Positionnement central des boutons dans le Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #ffffff;  /* Ou une autre couleur visible sur tous les fonds */
+}
+
+
+

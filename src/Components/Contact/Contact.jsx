@@ -4,7 +4,7 @@ import darkModeVideo from '../../assets/desktopOGGGG.mp4';
 import lightModeVideo from '../../assets/Automatic.mp4';
 import { useTheme } from '../../ThemeContext'; 
 
-import linkedinIcon from '/src/assets/linkk.png';  // Changez ces imports avec vos images
+import linkedinIcon from '/src/assets/linkk.png';  
 import mailIcon from '/src/assets/mail.png'; 
 import phoneIcon from '/src/assets/phone.png';
 
@@ -14,9 +14,9 @@ function Contact() {
   const { isLightMode } = useTheme();
   
   const [showMailPopup, setShowMailPopup] = useState(false);
-  const [showPhonePopup, setShowPhonePopup] = useState(false); // Ajout de l'état pour le pop-up téléphone
-  const [email, setEmail] = useState('ngk.kasia@gmail.com'); // Remplacez par votre propre adresse email
-  const phoneNumber = '0032 472 84 56 12'; // Votre numéro de téléphone
+  const [showPhonePopup, setShowPhonePopup] = useState(false); 
+  const [email, setEmail] = useState('ngk.kasia@gmail.com'); 
+  const phoneNumber = '0032 472 84 56 12'; 
 
   const currentVideo = isLightMode ? lightModeVideo : darkModeVideo;
 
@@ -25,12 +25,12 @@ function Contact() {
   };
 
   const handlePhoneClick = () => {
-    setShowPhonePopup(true); // Ouvre le pop-up téléphone
+    setShowPhonePopup(true); 
   };
 
   const handleClosePopup = () => {
     setShowMailPopup(false);
-    setShowPhonePopup(false); // Ferme les deux pop-ups
+    setShowPhonePopup(false); 
   };
 
   const handleSendMail = () => {
@@ -39,9 +39,19 @@ function Contact() {
   };
 
   const handleCallFaceTime = () => {
-    // Redirection vers FaceTime (iOS, macOS)
     window.location.href = `facetime:${phoneNumber}`;
     setShowPhonePopup(false);
+  };
+
+  // Fonction pour scroller jusqu'à la vidéo et la démarrer
+  const handleScrollToVideo = () => {
+    if (videoRef.current) {
+      // Scroller jusqu'à la vidéo
+      videoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // Démarrer la vidéo automatiquement
+      videoRef.current.play();
+    }
   };
 
   useEffect(() => {
@@ -67,8 +77,10 @@ function Contact() {
           1
         );
 
-        // Ajuster la lecture de la vidéo en fonction du pourcentage
-        video.currentTime = progress * video.duration;
+        // Animation plus fluide avec interpolation
+        requestAnimationFrame(() => {
+          video.currentTime = progress * video.duration;
+        });
       }
     };
 
@@ -83,6 +95,9 @@ function Contact() {
 
   return (
     <div ref={sectionRef} className="contact-section">
+      <div className='ctc-me' onClick={handleScrollToVideo}>
+        <p>Contact me, please</p>
+      </div>
       <video
         ref={videoRef}
         className="main-video video-hey video-ctc"
@@ -101,7 +116,7 @@ function Contact() {
         <button onClick={handleMailClick}>
           <img src={mailIcon} alt="Email" />
         </button>
-        <button onClick={handlePhoneClick}> {/* Ouvre le pop-up téléphone */}
+        <button onClick={handlePhoneClick}>
           <img src={phoneIcon} alt="Phone" />
         </button>
       </div>
@@ -140,11 +155,11 @@ export default Contact;
 
 // import React, { useEffect, useRef, useState } from 'react';
 // import './Contact.css'; 
-// import darkModeVideo from '../../assets/desktopOGG.mp4';
+// import darkModeVideo from '../../assets/desktopOGGGG.mp4';
 // import lightModeVideo from '../../assets/Automatic.mp4';
 // import { useTheme } from '../../ThemeContext'; 
 
-// import linkedinIcon from '/src/assets/linkk.png';  // Changez ces imports avec vos images
+// import linkedinIcon from '/src/assets/linkk.png';  
 // import mailIcon from '/src/assets/mail.png'; 
 // import phoneIcon from '/src/assets/phone.png';
 
@@ -154,7 +169,9 @@ export default Contact;
 //   const { isLightMode } = useTheme();
   
 //   const [showMailPopup, setShowMailPopup] = useState(false);
-//   const [email, setEmail] = useState('ngk.kasia@gmail.com'); // Remplacez par votre propre adresse email
+//   const [showPhonePopup, setShowPhonePopup] = useState(false); 
+//   const [email, setEmail] = useState('ngk.kasia@gmail.com'); 
+//   const phoneNumber = '0032 472 84 56 12'; 
 
 //   const currentVideo = isLightMode ? lightModeVideo : darkModeVideo;
 
@@ -162,13 +179,23 @@ export default Contact;
 //     setShowMailPopup(true);
 //   };
 
+//   const handlePhoneClick = () => {
+//     setShowPhonePopup(true); 
+//   };
+
 //   const handleClosePopup = () => {
 //     setShowMailPopup(false);
+//     setShowPhonePopup(false); 
 //   };
 
 //   const handleSendMail = () => {
 //     window.location.href = `mailto:${email}`;
 //     setShowMailPopup(false);
+//   };
+
+//   const handleCallFaceTime = () => {
+//     window.location.href = `facetime:${phoneNumber}`;
+//     setShowPhonePopup(false);
 //   };
 
 //   useEffect(() => {
@@ -194,9 +221,10 @@ export default Contact;
 //           1
 //         );
 
-//         // Ajuster la lecture de la vidéo en fonction du pourcentage
-//         // Progression de la vidéo en fonction du défilement
-//         video.currentTime = progress * video.duration;
+//         // Animation plus fluide avec interpolation
+//         requestAnimationFrame(() => {
+//           video.currentTime = progress * video.duration;
+//         });
 //       }
 //     };
 
@@ -211,6 +239,7 @@ export default Contact;
 
 //   return (
 //     <div ref={sectionRef} className="contact-section">
+//       <div className='ctc-me'><p>Contact me, please</p></div>
 //       <video
 //         ref={videoRef}
 //         className="main-video video-hey video-ctc"
@@ -229,7 +258,7 @@ export default Contact;
 //         <button onClick={handleMailClick}>
 //           <img src={mailIcon} alt="Email" />
 //         </button>
-//         <button onClick={() => window.location.href = 'tel:+1234567890'}>
+//         <button onClick={handlePhoneClick}>
 //           <img src={phoneIcon} alt="Phone" />
 //         </button>
 //       </div>
@@ -244,10 +273,22 @@ export default Contact;
 //           </div>
 //         </div>
 //       )}
+
+//       {/* Popup pour le téléphone */}
+//       {showPhonePopup && (
+//         <div className="phone-popup">
+//           <div className="popup-content">
+//             <p>Numéro de téléphone: {phoneNumber}</p>
+//             <button onClick={handleCallFaceTime}>Appeler via FaceTime</button>
+//             <button onClick={handleClosePopup}>Fermer</button>
+//           </div>
+//         </div>
+//       )}
 //     </div>
 //   );
 // }
 
 // export default Contact;
+
 
 
