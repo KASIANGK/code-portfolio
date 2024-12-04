@@ -96,7 +96,7 @@
   
   .skill-card {
     width: 180px;
-    margin: 20px;
+    /* margin: 20px; */
 
   }
   
@@ -168,4 +168,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+
+
+/* Style général pour les boutons de pagination */
+.pagination button {
+  margin: 0 5px;
+}
+
+/* Cacher les boutons numérotés sur les écrans de moins de 428px */
+@media (max-width: 768px) {
+  /* Cacher les boutons de page sauf "Previous" et "Next" */
+  .pagination button:not(.previous):not(.next) {
+    display: none;
+  }
+
+  /* Ajouter un peu d'espace autour des boutons "Previous" et "Next" */
+  .pagination button {
+    margin: 0 10px;
+  }
+}
+
+.pagination button.active {
+  font-weight: bold;
+}
+
+/* Style des autres éléments comme les compétences */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.skill-card {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.search-filter {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.category-filter button {
+  margin-right: 10px;
 }

@@ -1,0 +1,152 @@
+{
+    "skills": [
+      {
+        "name": "HTML",
+        "level": 90,
+        "image": "/src/assets/sass.png",
+        "description": "Maîtrise du HTML5 et des bonnes pratiques.",
+        "category": "Frontend"
+      },
+      {
+        "name": "CSS",
+        "level": 85,
+        "image": "/src/assets/sass.png",
+        "description": "Création de layouts responsives et animations CSS.",
+        "category": "Frontend"
+      },
+      {
+        "name": "JavaScript",
+        "level": 80,
+        "image": "/src/assets/js.png",
+        "description": "Programmation dynamique avec ES6+.",
+        "category": "Frontend"
+      },
+      {
+        "name": "React",
+        "level": 75,
+        "image": "/src/assets/react.svg.png",
+        "description": "Création d’applications interactives avec React.",
+        "category": "Frontend"
+      },
+      {
+        "name": "Node.js",
+        "level": 70,
+        "image": "/src/assets/node.png",
+        "description": "Développement backend avec Node.js et Express.",
+        "category": "Backend"
+      },
+      {
+        "name": "Git",
+        "image": "/src/assets/git.png",
+        "level": 95,
+        "description": "Gestion de version avec Git et GitHub.",
+        "category": "Logiciels"
+      },
+      {
+        "name": "Photoshop",
+        "level": 65,
+        "image": "/src/assets/photoshop.png",
+        "description": "Création et édition d’images avec Photoshop.",
+        "category": "Logiciels"
+      },
+      {
+        "name": "Sass",
+        "level": 80,
+        "image": "/src/assets/sass.png",
+        "description": "Préprocesseur CSS pour un code plus propre et structuré.",
+        "category": "Frontend"
+      },
+      {
+        "name": "Vue.js",
+        "level": 70,
+        "image": "/src/assets/Vue.png",
+        "description": "Framework JavaScript pour des interfaces utilisateur dynamiques.",
+        "category": "Frontend"
+      },
+      {
+        "name": "Nuxt.js",
+        "level": 65,
+        "image": "/src/assets/nuxt.png",
+        "description": "Framework pour créer des applications Vue.js côté serveur.",
+        "category": "Frontend"
+      },
+      {
+        "name": "Next.js",
+        "level": 80,
+        "image": "/src/assets/next-js.svg",
+        "description": "Framework React pour des applications côté serveur.",
+        "category": "Frontend"
+      },
+      {
+        "name": "PHP",
+        "level": 60,
+        "image": "/src/assets/sneakers.png",
+        "description": "Langage de programmation pour le développement backend.",
+        "category": "Backend"
+      },
+      {
+        "name": "Django Rest Framework",
+        "level": 70,
+        "image": "/src/assets/sneakers.png",
+        "description": "Framework pour créer des APIs avec Django.",
+        "category": "Backend"
+      },
+      {
+        "name": "Python",
+        "level": 75,
+        "image": "/src/assets/sneakers.png",
+        "description": "Langage de programmation pour le développement backend.",
+        "category": "Backend"
+      },
+      {
+        "name": "Laravel",
+        "level": 65,
+        "image": "/src/assets/sneakers.png",
+        "description": "Framework PHP pour le développement backend rapide.",
+        "category": "Backend"
+      },
+      {
+        "name": "Bender",
+        "level": 50,
+        "image": "/src/assets/sneakers.png",
+        "description": "Logiciel de modélisation 3D.",
+        "category": "Logiciels"
+      },
+      {
+        "name": "Premiere Pro",
+        "level": 60,
+        "image": "/src/assets/sneakers.png",
+        "description": "Logiciel de montage vidéo.",
+        "category": "Logiciels"
+      },
+      {
+        "name": "Final Pro",
+        "level": 55,
+        "image": "/src/assets/sneakers.png",
+        "description": "Logiciel de montage vidéo professionnel.",
+        "category": "Logiciels"
+      },
+      {
+        "name": "Procreate",
+        "level": 70,
+        "image": "/src/assets/sneakers.png",
+        "description": "Application de dessin pour tablettes.",
+        "category": "Logiciels"
+      },
+      {
+        "name": "DBeaver",
+        "level": 70,
+        "image": "/src/assets/DB.svg.png",
+        "description": "Application de dessin pour tablettes.",
+        "category": "Backend"
+      },
+      {
+        "name": "Three.js",
+        "level": 65,
+        "image": "/src/assets/sneakers.png",
+        "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
+        "category": "Bibliothèques"
+      }
+    ]
+  }
+  
