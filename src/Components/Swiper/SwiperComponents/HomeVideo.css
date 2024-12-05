@@ -1,0 +1,41 @@
+.home {
+  width: 100%;
+}
+.main-video {
+width: 100%;
+/* padding-top: 5%; */
+/* height: 100%; */
+object-fit: cover;
+}
+.video-hey {
+margin-top: -123px;
+}
+.video-div {
+display: flex;
+justify-content: center;
+align-items: center;
+/* flex-direction: column; */
+height: 700px;
+}
+.home-about {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+@media (max-width: 768px){
+  .content-container {
+    height: auto; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 768px){
+  .swiper-slide {
+    height: 400px; 
+  }
+}

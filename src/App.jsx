@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './ThemeContext'; // Importer le contexte
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
-import Portfolio from './Components/Portfolio/Portfolio';
-import About from './Components/About/About';
+import Portfolio from './Components/Swiper/SwiperComponents/Portfolio';
+import About from './Components/Swiper/SwiperComponents/About';
 import Team from './Components/Teams/Teams';
-import Players from './Components/Players/Players'
-// import Div360 from './Components/Players/Div360';
+import Players from './Components/Portfolio/PortfolioAll'
 import General from './Components/General/General';
+import PortfolioAll from './Components/Portfolio/PortfolioAll';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/players" element={<Players />} />
+            <Route path="/portfolio-all" element={<PortfolioAll />} />
             {/* <Route path="/div360" element={<Div360 />} /> */}
             <Route path="/general" element={<General />} />
             

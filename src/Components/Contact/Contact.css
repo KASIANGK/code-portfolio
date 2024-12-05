@@ -161,3 +161,62 @@
   width: 100%;
   object-fit: cover;
 }
+
+
+
+
+
+.contact-buttons button {
+  transition: transform 0.3s ease;
+}
+
+.contact-buttons .scale-up {
+  transform: scale(1.5);
+}
+
+.mail-popup,
+.phone-popup {
+  /* Style de vos popups */
+  /* Par exemple, */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.contact-buttons button {
+  transition: transform 0.3s ease;
+}
+
+.contact-buttons .scale-up {
+  transform: scale(1.5);
+}
+
+.contact-buttons .scale-up.double-pulse {
+  animation: pulse 0.6s ease-out 2;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.5);
+  }
+  
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}

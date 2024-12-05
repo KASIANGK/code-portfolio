@@ -1,144 +1,369 @@
-.home {
+.playersall {
+    background-image: url('../assets//back.png');
+    background-size: cover; 
+    background-position: center; 
+}
+.div-indi {
+    margin-bottom: 8%;
+}
+.playersall {
+    width: 100vw;
+    background-image: url('path_to_your_image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.players {
     width: 100%;
+    background-color: rgba(42, 34, 45, 0.525);
 }
-.main-video-portfolio {
-  width: 41%;
-  padding-top: 5%;
-  /* height: 100%; */
-  object-fit: cover;
+.teams {
+    width: 100%;
+    background-color: rgb(58, 91, 174);
 }
-.video-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-direction: column; */
-  height: 700px;
-}
-.home-about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.video-container-all {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    margin-top: 8%;
+    box-sizing: border-box; 
 }
 
-/* Styles par défaut - Dark Mode */
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-#root.dark-mode {
-  background-color: rgb(0, 0, 0); 
-}
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.row div {
+    width: 550px;
+    min-width: 300px;
+    max-width: 90vw; 
 }
 
-a:hover {
-  color: #535bf2;
+.card {
+    position: relative;
+    height: 400px;
+    width: 200px;
+    margin: 20px;
+    transition: ease all 2.3s;
+    perspective: 1200px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.card:hover .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
 }
 
-body.dark-mode {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: auto;
-  /* min-height: 100vh; */
-  background-color: rgb(0, 0, 0); 
-  color: rgba(255, 255, 255, 0.87);
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+.card:hover .cover:before {
+    transform: translateZ(80px);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.card:hover .cover:after {
+    background-color: rgb(43, 30, 89);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  color: rgba(255, 255, 255, 0.87); 
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
+.card:hover .cover h1 {
+    transform: translateZ(100px);
+}
+
+.card:hover .cover .price {
+    transform: translateZ(60px);
+}
+
+.card:hover .cover a {
+    transform: translateZ(-60px) rotateY(-180deg);
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+}
+
+.cover:before {
+    content: '';
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(39, 40, 74, 0.1);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2.3s;
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+}
+
+.cover:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+    background: rgba(41, 16, 87, 0.099);
+    border-radius: 15px;
+}
+
+.cover h1 {
+    font-weight: 600;
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    z-index: 3;
+    font-size: 1.5em;
+    transform: translateZ(0px);
+}
+
+.cover .price {
+    font-weight: 200;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s;
+    z-index: 4;
+    font-size: 1.2em;
+    transform: translateZ(0px);
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 99.97% !important;
+    transform-style: preserve-3d;
+    transition: all 2.3s ease;
+    z-index: 0; /* La face arrière derrière la face avant */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    border-radius: 15px;
+    border: 5px solid rgba(255, 255, 255, 0.5); /* Bordure sur la face arrière */
+}
+
+
+.card-back a,
+.card-back button {
+    transform-style: preserve-3d;
+    transition: ease transform 2.3s, ease background 0.5s;
+    transform: translateZ(-1px) rotateY(-180deg);
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    font-weight: 200;
+    font-size: 1.3em;
+    color: white;
+    padding: 14px 32px;
+    outline: none;
+    text-decoration: none;
+    /* border-radius: 10px; */
+}
+
+.card-back a:hover,
+.card-back button:hover {
+    background-color: white;
+    color: #0b0f08;
+}
+
+.titlee {
+    width: 100%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        height: 350px;
+        width: 180px;
+    }
+    .cover h1 {
+        font-size: 1.3em;
+    }
+    .cover .price {
+        font-size: 1em;
+    }
+    .card-back a, .card-back button {
+        font-size: 1.1em;
+        padding: 12px 28px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        height: 300px;
+        width: 160px;
+    }
+    .cover h1 {
+        font-size: 1.2em;
+    }
+    .cover .price {
+        font-size: 0.9em;
+    }
+    .card-back a, .card-back button {
+        font-size: 1em;
+        padding: 10px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 250px;
+        width: 140px;
+    }
+    .cover h1 {
+        font-size: 1.1em;
+    }
+    .cover .price {
+        font-size: 0.8em;
+    }
+    .card-back a, .card-back button {
+        font-size: 0.9em;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        height: 220px;
+        width: 120px;
+    }
+    .cover h1 {
+        font-size: 1em;
+    }
+    .cover .price {
+        font-size: 0.7em;
+    }
+    .card-back a, .card-back button {
+        font-size: 0.8em;
+        padding: 6px 16px;
+    }
+}
+
+
+.players {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.all-portfolio {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-/* Styles pour le Light Mode */
 
-#root.light-mode {
-  background-color: rgb(216, 216, 216); 
-}
-body.light-mode {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #e2e2e2
-}
-
-body.light-mode a {
-  color: rgba(0, 0, 0, 0.87); 
-}
-
-body.light-mode a:hover {
-  color: #ff5100;
-}
-
-body.light-mode button {
-  background-color: #e1e1e1;  
-  color: rgba(0, 0, 0, 0.87); 
-}
-
-body.light-mode button:hover {
-  background-color: #e0e0e0; 
+/* Style pour la vidéo en arrière-plan */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Place la vidéo en arrière-plan */
 }
 
 
-
-
-/* @media (min-width: 768px) {
-  .content-container-portfolio {
-    height: 400px !important;
-  }
-} */
-/* @media (max-width: 1024px) {
-  .portfolio-haut {
-    margin-top: -40% !important;
-  }
-} */
-@media (max-width: 1024px) {
-  .portfolio-haut {
-    margin-top: -20% !important;
-  }
+/* Animation de l'apparition progressive de la div playersall */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Vous pouvez ajuster cette valeur pour la position de départ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Position finale, après l'animation */
+    }
 }
-@media (min-width: 1024px) {
-  .portfolio-haut {
-    margin-top: -10% !important;
-    height: 100vh !important;
-  }
+
+/* Appliquez l'animation à .playersall */
+.playersall {
+    animation: fadeIn 2s ease-out forwards; /* L'animation dure 2 secondes, et ne reviendra pas à l'état initial (forwards) */
+    opacity: 0; /* L'état initial de la div est complètement transparente */
+    transform: translateY(20px); /* L'état initial de la div est légèrement décalé vers le bas */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Assurez-vous que les propriétés de transition sont définies */
+}
+
+
+
+
+
+/* Animation de l'apparition progressive de la div playersall */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Vous pouvez ajuster cette valeur pour la position de départ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Position finale, après l'animation */
+    }
+}
+
+/* Animation de l'opacité de la div black-overlay */
+@keyframes fadeOverlay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7; /* L'opacité finale de la superposition noire */
+    }
+}
+
+/* Appliquez l'animation à .playersall */
+.playersall {
+    animation: fadeIn 2s ease-out forwards; /* L'animation dure 2 secondes, et ne reviendra pas à l'état initial (forwards) */
+    opacity: 0; /* L'état initial de la div est complètement transparente */
+    transform: translateY(20px); /* L'état initial de la div est légèrement décalé vers le bas */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Assurez-vous que les propriétés de transition sont définies */
+}
+
+/* Div intermédiaire entre la vidéo et playersall */
+.black-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1); /* Fond noir */
+    opacity: 0; /* Initialement transparent */
+    z-index: 1; /* Placez-la juste au-dessus de la vidéo */
+    animation: fadeOverlay 2s ease-out forwards; /* Animation qui rend l'overlay progressivement noir */
+    transition: opacity 2s ease-out; /* Durée de l'animation de l'opacité */
+}
+
+/* Assurez-vous que l'animation est déclenchée une fois la vidéo terminée */
+.black-overlay.show {
+    opacity: 0.9; /* L'opacité maximale une fois l'animation terminée */
+}
+
+/* Assurez-vous que playersall reste en haut de la superposition */
+.playersall {
+    position: relative;
+    z-index: 2; /* Elle reste au-dessus de .black-overlay */
 }

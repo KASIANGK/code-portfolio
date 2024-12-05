@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.css'; 
-import darkModeVideo from '../../assets/desktopOGGGG.mp4';
+import darkModeVideo from '../../assets/desktopgrain.mp4';
 import lightModeVideo from '../../assets/Automatic.mp4';
 import { useTheme } from '../../ThemeContext'; 
 
@@ -17,15 +17,19 @@ function Contact() {
   const [showPhonePopup, setShowPhonePopup] = useState(false); 
   const [email, setEmail] = useState('ngk.kasia@gmail.com'); 
   const phoneNumber = '0032 472 84 56 12'; 
+  const [isScaling, setIsScaling] = useState(false); // Nouveau state pour gérer le scaling
+  const [isDoubleScaling, setIsDoubleScaling] = useState(false); // Pour gérer la double pulsion
 
   const currentVideo = isLightMode ? lightModeVideo : darkModeVideo;
 
   const handleMailClick = () => {
     setShowMailPopup(true);
+    triggerDoublePulsation();
   };
 
   const handlePhoneClick = () => {
     setShowPhonePopup(true); 
+    triggerDoublePulsation();
   };
 
   const handleClosePopup = () => {
@@ -52,6 +56,21 @@ function Contact() {
       // Démarrer la vidéo automatiquement
       videoRef.current.play();
     }
+
+    // Déclencher le scaling des icônes
+    setIsScaling(true);
+    // Après 1 seconde, revenir à la taille normale
+    setTimeout(() => {
+      setIsScaling(false);
+    }, 1000);
+  };
+
+  // Fonction pour gérer la double pulsion
+  const triggerDoublePulsation = () => {
+    setIsDoubleScaling(true);
+    setTimeout(() => {
+      setIsDoubleScaling(false);
+    }, 600); // Temps entre les deux pulsations (par exemple 600ms)
   };
 
   useEffect(() => {
@@ -110,13 +129,22 @@ function Contact() {
 
       {/* Div pour les icônes */}
       <div className="contact-buttons">
-        <button onClick={() => window.open('https://www.linkedin.com', '_blank')}>
+        <button 
+          onClick={() => window.open('https://www.linkedin.com', '_blank')}
+          className={isScaling || isDoubleScaling ? 'scale-up' : ''}
+        >
           <img src={linkedinIcon} alt="LinkedIn" />
         </button>
-        <button onClick={handleMailClick}>
+        <button 
+          onClick={handleMailClick}
+          className={isScaling || isDoubleScaling ? 'scale-up' : ''}
+        >
           <img src={mailIcon} alt="Email" />
         </button>
-        <button onClick={handlePhoneClick}>
+        <button 
+          onClick={handlePhoneClick}
+          className={isScaling || isDoubleScaling ? 'scale-up' : ''}
+        >
           <img src={phoneIcon} alt="Phone" />
         </button>
       </div>
@@ -147,8 +175,6 @@ function Contact() {
 }
 
 export default Contact;
-
-
 
 
 
@@ -198,6 +224,17 @@ export default Contact;
 //     setShowPhonePopup(false);
 //   };
 
+//   // Fonction pour scroller jusqu'à la vidéo et la démarrer
+//   const handleScrollToVideo = () => {
+//     if (videoRef.current) {
+//       // Scroller jusqu'à la vidéo
+//       videoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+//       // Démarrer la vidéo automatiquement
+//       videoRef.current.play();
+//     }
+//   };
+
 //   useEffect(() => {
 //     const handleScroll = () => {
 //       if (!videoRef.current || !sectionRef.current) return;
@@ -239,7 +276,9 @@ export default Contact;
 
 //   return (
 //     <div ref={sectionRef} className="contact-section">
-//       <div className='ctc-me'><p>Contact me, please</p></div>
+//       <div className='ctc-me' onClick={handleScrollToVideo}>
+//         <p>Contact me, please</p>
+//       </div>
 //       <video
 //         ref={videoRef}
 //         className="main-video video-hey video-ctc"
@@ -289,6 +328,8 @@ export default Contact;
 // }
 
 // export default Contact;
+
+
 
 
 

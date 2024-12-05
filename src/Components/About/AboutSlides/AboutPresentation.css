@@ -16,10 +16,38 @@
     position: relative;
 }
 
+.img-about-360 {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.txt-about {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .image-about {
     width: 80%;
     height: auto;
-    transition: transform 0.5s ease-in-out; /* Ajout d'un effet de zoom ou autre sur l'image */
+    transition: transform 0.5s ease-in-out; 
+}
+
+.image-about-360 {
+    width: 200px;
+    height: auto;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.image-about-txt {
+    width: 200px;
+    height: auto;
+    transition: transform 0.5s ease-in-out; 
 }
 
 .presentation {
@@ -27,10 +55,19 @@
     padding: 20px;
 }
 
+.presentation-360 {
+    width: 40%;
+    padding: 20px;
+}
+
+.txt-presentation {
+    width: 40%;
+    padding: 20px;
+}
+
 .sliding-div {
     position: absolute;
     top: 0;
-    left: -100%; /* Initialement cachée à gauche */
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
@@ -38,9 +75,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    transition: left 0.5s ease-in-out; /* Transition pour glisser de gauche à droite */
+    /* flex-direction: column; */
     z-index: 2; /* S'assure que la div glissante est au-dessus des autres éléments */
+    transition: transform 0.5s ease-in-out; /* Animation de glissement */
+}
+
+.sliding-div-left {
+    left: -100%; /* Initialement cachée à gauche */
+    transform: translateX(-100%);
+}
+
+.sliding-div-right {
+    right: -100%; /* Initialement cachée à droite */
+    transform: translateX(100%);
+}
+
+/* Activation des divs glissantes */
+.sliding-div.active {
+    transform: translateX(0); /* Lorsque la div est active, elle glisse dans l'écran */
 }
 
 .about-presentation:hover .sliding-div {

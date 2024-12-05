@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel"; // Importer le style de mousewheel
-import HomeVideo from '../Home/HomeVideo';
-import Portfolio from '../Portfolio/Portfolio';
-import About from '../About/About'
+import HomeVideo from './SwiperComponents/HomeVideo';
+import Portfolio from './SwiperComponents/Portfolio';
+import About from './SwiperComponents/About'
 import './SwiperMain.css';
 import { Navigation, Pagination, Mousewheel } from 'swiper/modules'; // Ajouter Mousewheel ici
 

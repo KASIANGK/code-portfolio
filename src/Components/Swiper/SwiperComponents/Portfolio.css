@@ -1,0 +1,245 @@
+.portfolio {
+  width: 100%;
+}
+.main-video {
+  width: 100%;
+  padding-top: 5%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  height: 700px;
+  width: 100%;
+  }
+.home-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* Conteneur principal des boutons */
+.btns-portfolio {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+/* Conteneur pour les boutons */
+.buttons-container-first, .buttons-container-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Nécessaire pour positionner l'image à l'intérieur */
+  width: 40%; 
+  height: 320px;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.portfolio-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Nécessaire pour positionner l'image à l'intérieur */
+  width: 100%;
+  height: 320px;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+/* Conteneur de l'image qui apparaîtra au survol */
+.hover-image-first, .hover-image-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 700px;
+
+  right: 0;
+  bottom: 0;
+  display: none; /* Cache l'image par défaut */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.buttons-container-first:hover .hover-image-first,
+.buttons-container-second:hover .hover-image-second {
+  display: flex; /* Affiche l'image au survol */
+  opacity: 1; /* Rendre l'image visible */
+}
+
+.hover-image-first img,
+.hover-image-second img {
+  width: 100%; /* Ou un autre style pour l'adapter à tes besoins */
+  height: 100%;
+  object-fit: cover; /* Couvre le conteneur avec l'image */
+  transition: opacity 0.3s ease;
+}
+
+/* Style des boutons */
+.portfolio-button {
+  /* background-color: #007BFF; */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* .portfolio-button:hover {
+  background-color: #0056b3;
+} */
+
+/* Style du vidéo */
+.main-video {
+  width: 100%;
+  /* height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0; */
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur principal */
+.portfolio {
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+  position: relative; /* Nécessaire pour positionner la vidéo et les images correctement */
+}
+
+
+
+
+/* Les images qui apparaissent au survol */
+.hover-image-first, .hover-image-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;  /* L'image couvre toute la largeur de la vidéo */
+  height: 100%; /* L'image couvre toute la hauteur de la vidéo */
+  object-fit: cover; /* Assure que l'image prend toute la surface de la vidéo */
+  opacity: 0; /* L'image est invisible par défaut */
+  transition: opacity 0.3s ease; /* Transition pour rendre l'image visible */
+  z-index: 2; /* L'image doit être au-dessus de la vidéo */
+}
+
+/* Affiche l'image au survol du premier bouton */
+.buttons-container-first:hover ~ .main-video-wrapper .hover-image-first {
+  opacity: 1; /* L'image devient visible */
+}
+
+/* Affiche l'image au survol du deuxième bouton */
+.buttons-container-second:hover ~ .main-video-wrapper .hover-image-second {
+  opacity: 1; /* L'image devient visible */
+}
+
+/* Conteneur principal des boutons */
+.btns-portfolio {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+/* Conteneur pour chaque bouton */
+.buttons-container-first, .buttons-container-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  height: 320px;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* Style des boutons */
+.portfolio-button {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur des images qui apparaissent au survol */
+.hover-image-first, .hover-image-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* L'image est cachée par défaut */
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Assure que l'image est au-dessus de la vidéo */
+}
+
+/* Au survol du bouton correspondant, on rend l'image visible */
+.buttons-container-first:hover .hover-image-first {
+  opacity: 1;
+}
+
+.buttons-container-second:hover ~ .main-video-wrapper .hover-image-second {
+  opacity: 1;
+}
