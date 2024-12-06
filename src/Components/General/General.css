@@ -1,4 +1,4 @@
-.home {
+/* .home {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -54,7 +54,6 @@
     position: relative;
     z-index: 2;
     display: flex;
-    /* align-items: flex-start; */
     flex-wrap: wrap;
     padding: 50px;
     justify-content: center;
@@ -70,7 +69,6 @@
     border-radius: 28px;
     width: 420px;
     height: 300px;
-    /* flex-basis: calc(33.33333% - 30px); */
     margin: 0 15px 30px;
   }
   
@@ -230,14 +228,8 @@
   .button {
     width: 200px;
   }
-  
-  
-  /* .content-sections {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
+   */
+
 
 
 

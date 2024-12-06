@@ -1,0 +1,135 @@
+/* Style principal du composant */
+.portfolio-details {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .details-visu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .video-container {
+    height: fit-content;
+  }
+  
+  .project-video {
+    max-width: 800px;
+    object-fit: cover;
+  }
+  
+  /* Section texte du projet */
+  .project-txt {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px; /* Largeur fixe pour la section texte */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+  }
+  
+  /* Conteneur principal du projet */
+  .project-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  /* Espacement entre les éléments */
+    flex-wrap: wrap;  /* Permet aux éléments de se mettre à la ligne si l'espace est insuffisant */
+    flex-direction: row;
+    align-items: top;
+    gap: 20px;  /* Espacement entre les éléments */
+    box-sizing: border-box;
+  }
+  
+  /* Flex pour le texte et la vidéo */
+  .project-txt, .video-container {
+    flex: 1 1 250px;  /* Les deux éléments prennent de l'espace de manière flexible */
+  }
+  
+  /* Mise en page des titres et des paragraphes */
+  .project-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-content p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+  
+  /* Carousel d'images du projet */
+  .project-image-container {
+    display: flex;
+    width: 100vw;  /* Largeur de la vue entière */
+    justify-content: flex-start;  /* Les images s'alignent à gauche */
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;  /* Active le défilement horizontal */
+    padding: 10px 0;  /* Espace au-dessus et en-dessous */
+    scroll-snap-type: x mandatory;  /* Effet de "snap" sur chaque image */
+  }
+  
+  .carousel {
+    display: flex;
+    flex-direction: row;  /* Les images sont alignées horizontalement */
+    gap: 15px;  /* Espacement entre les images */
+  }
+  
+  .carousel-item {
+    flex-shrink: 0;  /* Empêche la réduction des éléments */
+    scroll-snap-align: start;  /* Alignement des images lorsqu'elles sont arrêtées */
+  }
+  
+  .project-image {
+    max-width: 100%;  /* Réduit la taille de l'image pour qu'elle ne dépasse pas le conteneur */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);  /* Ombre autour des images */
+  }
+  
+  /* Espacement et alignement de l'image */
+  .project-image-container img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Effet d'ombre pour les titres et les paragraphes */
+  .portfolio-details h1,
+  .portfolio-details p {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Pour un effet de texte en surbrillance */
+  }
+  
+  /* Section des compétences utilisées */
+  .programmes-images {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .program-image {
+    margin-top: 20px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .program-image img {
+    width: 70px;
+  }
+  

@@ -1,34 +1,45 @@
 {
     "portfolio": [
       {
-        "nom": "Projet 1",
+        "nom": "SideGeek",
         "date": "2024",
-        "societe": "Entreprise A",
-        "image": "/src/assets/sneakers.png",
-        "image-hover": "/src/assets/snlight.png",
-        "video": "/assets/projet1-video.mp4",
-        "backgroundimage": "/assets/projet1-background.jpg",
-        "programmes": "React, Node.js, MongoDB",
-        "frontend": "React, JavaScript",
-        "backend": "Node.js, Express"
+        "societe": "Urban Tech",
+        "image": "/src/assets/side.png",
+        "video": "/src/assets/7.mp4",
+        "backgroundimage": "/assets/projet2-background.jpg",
+        "programmes": "Vue.js, Php, Laravel, MAMP",
+        "frontend": "Vue.js",
+        "backend": "Firebase"
       },
       {
-        "nom": "Projet 2",
+        "nom": "McDonalds Project",
         "date": "2024",
-        "societe": "Entreprise B",
+        "societe": "MolenGeek",
         "image": "/src/assets/mc.png",
-        "video": "/assets/projet2-video.mp4",
+        "video": "/src/assets/mcdo.mp4",
         "backgroundimage": "/assets/projet2-background.jpg",
         "programmes": "Vue.js, Firebase",
         "frontend": "Vue.js",
         "backend": "Firebase"
       },
       {
-        "nom": "Projet 3",
+        "nom": "Sneakers Shop",
         "date": "2024",
-        "societe": "Entreprise B",
+        "societe": "Entreprise A",
+        "image": "/src/assets/sneakers.png",
+        "image-hover": "/src/assets/snlight.png",
+        "video": "/src/assets/sn.mp4",
+        "backgroundimage": "/assets/projet1-background.jpg",
+        "programmes": "React, Node.js, MongoDB",
+        "frontend": "React, JavaScript",
+        "backend": "Node.js, Express"
+      },
+      {
+        "nom": "Anime Library",
+        "date": "2024",
+        "societe": "",
         "image": "/src/assets/anime.png",
-        "video": "/assets/projet2-video.mp4",
+        "video": "/src/assets/anime.mp4",
         "backgroundimage": "/assets/projet2-background.jpg",
         "programmes": "Vue.js, Firebase",
         "frontend": "Vue.js",
@@ -46,24 +57,13 @@
         "backend": "Firebase"
       },
       {
-        "nom": "Projet 5",
+        "nom": "MolenGame Project",
         "date": "2024",
-        "societe": "Entreprise B",
+        "societe": "Hackaton WebDev MG",
         "image": "/src/assets/molengame.jpg",
-        "video": "/assets/projet2-video.mp4",
+        "video": "/src/assets/mg.mp4",
         "backgroundimage": "/assets/projet2-background.jpg",
-        "programmes": "Vue.js, Firebase",
-        "frontend": "Vue.js",
-        "backend": "Firebase"
-      },
-      {
-        "nom": "Projet 5",
-        "date": "2024",
-        "societe": "Entreprise B",
-        "image": "/src/assets/molengame.jpg",
-        "video": "/assets/projet2-video.mp4",
-        "backgroundimage": "/assets/projet2-background.jpg",
-        "programmes": "Vue.js, Firebase",
+        "programmes": "Figma, JavaScript, Blender",
         "frontend": "Vue.js",
         "backend": "Firebase"
       }

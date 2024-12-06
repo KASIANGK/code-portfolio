@@ -33,17 +33,24 @@ function AboutSkills() {
   const totalPages = Math.ceil(filteredSkills.length / skillsPerPage);
 
   // Fonction pour afficher les étoiles en fonction du niveau
-  const renderStars = (level) => {
-    const maxStars = 5;
-    const filledStars = Math.round(level / 20);
 
-    let stars = [];
-    for (let i = 0; i < maxStars; i++) {
-      stars.push(i < filledStars ? '★' : '☆');
-    }
-
-    return stars.join('');
-  };
+    const renderStars = (level) => {
+      const maxStars = 5;
+      const filledStars = Math.round(level / 20); // Calcul du nombre d'étoiles remplies
+    
+      let stars = [];
+      for (let i = 0; i < maxStars; i++) {
+        stars.push(
+          <span
+            key={i}
+            className={i < filledStars ? 'star filled' : 'star'}
+          ></span>
+        );
+      }
+    
+      return stars;
+    };
+    
 
   // Fonction de pagination
   const paginate = (pageNumber) => {
@@ -52,7 +59,7 @@ function AboutSkills() {
 
   return (
     <div className="about-skills">
-      <div className='search-filter'>
+      <div className="search-filter">
         {/* Barre de recherche */}
         <div className="search-bar">
           <input
@@ -81,16 +88,18 @@ function AboutSkills() {
               {/* Utilisation de l'image comme fond pour chaque carte */}
               <div
                 className="ag-courses-item_bg"
-                style={{ backgroundImage: `url(${skill.image})` }}  
+                style={{
+                  backgroundImage: `url(${skill.image})`,
+                  backgroundColor: skill['background-color'], // Applique la couleur de fond dynamiquement
+                }}
               ></div>
-              <div className="ag-courses-item_content" style={{ zIndex: 3 }}>
-                <p className="boutonsH">{skill.name}</p>
-                <p>{skill.category}</p>
+              <div className="ag-courses-item_content">
+                <p className="boutonsH skill-title">{skill.name}</p>
                 <p>{renderStars(skill.level)}</p>
-                <button>See more</button>
               </div>
             </div>
           </section>
+
         ))}
       </div>
 
@@ -123,7 +132,6 @@ function AboutSkills() {
 }
 
 export default AboutSkills;
-
 
 
 

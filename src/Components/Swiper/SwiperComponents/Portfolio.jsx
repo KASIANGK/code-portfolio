@@ -94,12 +94,12 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel"; 
-import { useNavigate, Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import { useTheme } from '../../../ThemeContext'; 
 import './Portfolio.css';
 import lightModeVideo from '/src/assets/transition-ah.mp4';
@@ -108,31 +108,23 @@ import PortfolioResume from '../../Portfolio/PortfolioResume';
 import teamHoverImage from '/src/assets/about.png';  // Remplace par le bon nom et extension
 import playersHoverImage from '/src/assets/about.png';  // Idem pour l'autre image
 
-
 const Portfolio = () => {
   const { isLightMode } = useTheme();
-  const navigate = useNavigate();
-  
+  const swiperRef = useRef(null);  // Créer une référence pour Swiper
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleNavigateToHome = () => {
-    navigate('/');
+  // Fonction pour naviguer vers le slide suivant
+  const handleNavigateToPortfolioResume = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();  // Faites défiler vers le bas
+    }
   };
 
-  const handleIconClick = () => {
-    setIsClicked(true); 
-    setTimeout(() => {
-      setIsClicked(false); 
-    }, 300); 
-    handleNavigateToHome(); 
-  };
-
-
-  
   return (
     <div className={`portfolio ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
       <div>
         <Swiper
+          ref={swiperRef}  // Référence Swiper
           direction="vertical" 
           pagination={{ clickable: true }}
           spaceBetween={7}
@@ -147,7 +139,8 @@ const Portfolio = () => {
             <div className="content-container">
               <div className='btns-portfolio'>
                 <div className="buttons-container-first">
-                  <Link to="/general" className="portfolio-button"></Link>
+                  {/* Lien qui va activer le swipe vers le bas */}
+                  <button onClick={handleNavigateToPortfolioResume} className="portfolio-button"></button>
                 </div>
                 <div className="buttons-container-second">
                   <Link to="/portfolio-all" className="portfolio-button"></Link>
@@ -174,5 +167,6 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
 
 
