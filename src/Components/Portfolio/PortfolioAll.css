@@ -16,7 +16,9 @@
 
 .players {
     width: 100%;
-    background-color: rgba(42, 34, 45, 0.525);
+    background-color: rgba(42, 34, 45, 0.723); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(1.5px); /* Applique un flou de 10px */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilité avec les anciens navigateurs */
 }
 .teams {
     width: 100%;
@@ -69,6 +71,10 @@
 }
 
 .card:hover .cover a {
+    transform: translateZ(-60px) rotateY(-180deg);
+}
+
+.card:hover .cover .programs-images {
     transform: translateZ(-60px) rotateY(-180deg);
 }
 
@@ -159,6 +165,7 @@
 
 
 .card-back a,
+.card-back .programs-images,
 .card-back button {
     transform-style: preserve-3d;
     transition: ease transform 2.3s, ease background 0.5s;
@@ -367,3 +374,15 @@
     position: relative;
     z-index: 2; /* Elle reste au-dessus de .black-overlay */
 }
+
+
+.programs-images {
+    width: 70px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: none !important;
+    gap: 20px;
+}
+

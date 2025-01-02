@@ -10,6 +10,7 @@ import Players from './Components/Portfolio/PortfolioAll'
 import General from './Components/General/General';
 import PortfolioAll from './Components/Portfolio/PortfolioAll';
 import PortfolioDetails from './Components/Portfolio/PortfolioDetails';
+import AboutSkills from './Components/About/AboutSlides/AboutSkills';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/skills" element={<AboutSkills />} />
             <Route path="/portfolio-all" element={<PortfolioAll />} />
             <Route path="/portfolio/:id" element={<PortfolioDetails />} />
 

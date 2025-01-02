@@ -1,42 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import './AboutSkills.css';
-import skillsData from '../../../data/skills.json'; // Assurez-vous que ce chemin est correct
+import skillsData from '../../../data/skills.json'; 
 
 function AboutSkills() {
-  // État pour les compétences, filtre, recherche et pagination
   const [skills, setSkills] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const skillsPerPage = 4;
+  const skillsPerPage = 12;
 
-  // Charger les compétences à partir de skills.json
+  // data
   useEffect(() => {
     if (skillsData && skillsData.skills) {
-      setSkills(skillsData.skills);  // On utilise skillsData.skills ici
+      setSkills(skillsData.skills);  
     }
   }, []);
 
-  // Filtrer les compétences selon la catégorie et le terme de recherche
+  // recherche/filtre skills selon la catégorie et le terme 
   const filteredSkills = skills.filter(skill => {
     const matchesCategory = categoryFilter === 'All' || skill.category === categoryFilter;
     const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+  
 
-  // Calcul des indices des compétences à afficher pour la page actuelle
+  // compétences à afficher par page
   const indexOfLastSkill = currentPage * skillsPerPage;
   const indexOfFirstSkill = indexOfLastSkill - skillsPerPage;
   const currentSkills = filteredSkills.slice(indexOfFirstSkill, indexOfLastSkill);
 
-  // Calcul du nombre total de pages
+  // calcul du nombre total de pages
   const totalPages = Math.ceil(filteredSkills.length / skillsPerPage);
 
-  // Fonction pour afficher les étoiles en fonction du niveau
-
+  // afficher les étoiles en fonction du niveau
     const renderStars = (level) => {
       const maxStars = 5;
-      const filledStars = Math.round(level / 20); // Calcul du nombre d'étoiles remplies
+      const filledStars = Math.round(level / 20); // calcul du nombre d'étoiles remplies
     
       let stars = [];
       for (let i = 0; i < maxStars; i++) {
@@ -47,20 +46,23 @@ function AboutSkills() {
           ></span>
         );
       }
-    
       return stars;
     };
     
 
-  // Fonction de pagination
+  // pagination
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
+  console.log(categoryFilter);  // Vérifie la catégorie sélectionnée
+  console.log(skills.map(skill => skill.category));  // Vérifie toutes les catégories disponibles
+
+
   return (
     <div className="about-skills">
       <div className="search-filter">
-        {/* Barre de recherche */}
+        {/* searchbar */}
         <div className="search-bar">
           <input
             type="text"
@@ -70,7 +72,7 @@ function AboutSkills() {
           />
         </div>
 
-        {/* Filtre des catégories */}
+        {/* filtre par catégories */}
         <div className="category-filter">
           <button onClick={() => setCategoryFilter('All')}>All</button>
           <button onClick={() => setCategoryFilter('Frontend')}>Frontend</button>
@@ -80,17 +82,16 @@ function AboutSkills() {
         </div>
       </div>
 
-      {/* Affichage des compétences filtrées */}
+      {/* affichage des compétences filtrées */}
       <div className="ag-courses_box">
         {currentSkills.map((skill, index) => (
           <section key={index} className="ag-courses_item">
             <div className="ag-courses-item_link">
-              {/* Utilisation de l'image comme fond pour chaque carte */}
               <div
                 className="ag-courses-item_bg"
                 style={{
                   backgroundImage: `url(${skill.image})`,
-                  backgroundColor: skill['background-color'], // Applique la couleur de fond dynamiquement
+                  backgroundColor: skill['background-color'], 
                 }}
               ></div>
               <div className="ag-courses-item_content">
@@ -103,7 +104,7 @@ function AboutSkills() {
         ))}
       </div>
 
-      {/* Pagination */}
+      {/* pagination */}
       <div className="pagination">
         <button
           className="previous"
@@ -132,6 +133,14 @@ function AboutSkills() {
 }
 
 export default AboutSkills;
+
+
+
+
+
+
+
+
 
 
 

@@ -1,12 +1,37 @@
 /* Style principal du composant */
 .portfolio-details {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    color: white;
-    position: relative;
-    padding: 0 20px;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  color: white;
+  padding: 0 20px;
+  width: 100%;
+  /* margin-top: -2%; */
+  overflow: hidden;
+}
+
+.portfolio-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18; 
+  z-index: -1; 
+}
+
+.portfolio-content {
+  position: relative; /* Position relative pour rester au-dessus de l'arrière-plan */
+  z-index: 1; /* Positionner au-dessus de l'arrière-plan */
+}
+
+.retour-txt {
+  display: flex;
+  flex-direction: column;
+}
   
   .details-visu {
     display: flex;
@@ -21,10 +46,14 @@
   }
   
   .project-video {
-    max-width: 800px;
+    max-width: 100%;
     object-fit: cover;
+    border-radius: 15px;
+    margin-top: 20px;
   }
-  
+  /* .project-description {
+    padding-top: 3%;
+  } */
   /* Section texte du projet */
   .project-txt {
     background-color: rgba(0, 0, 0, 0.5);
@@ -33,10 +62,25 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 250px; /* Largeur fixe pour la section texte */
     box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    /* padding-top: 5%; */
+    z-index: 10;
+    gap: 20px;
+    /* width: 800px; */
   }
-  
+
+  .project-details {
+    min-width: 300px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px;
+    align-items: center;
+  }
+  .programmes-details {
+    width: 300px;
+    padding: 15px;
+  }
   /* Conteneur principal du projet */
   .project-content {
     position: relative;
@@ -47,11 +91,158 @@
     justify-content: space-between;  /* Espacement entre les éléments */
     flex-wrap: wrap;  /* Permet aux éléments de se mettre à la ligne si l'espace est insuffisant */
     flex-direction: row;
-    align-items: top;
-    gap: 20px;  /* Espacement entre les éléments */
+    align-items: none;
+    gap: 40px;  /* Espacement entre les éléments */
     box-sizing: border-box;
+    margin-top: 5%;
   }
-  
+  @media (min-width: 1260px) {
+    .programmes-images {
+      width: 520px;
+    }
+  }
+  @media (max-width: 1259px) {
+    .project-content {
+      flex-direction: column-reverse; /* Colonne inversée */
+      align-items: center;
+    }
+    .project-description {
+      padding-top: 0;
+    }
+
+    .project-txt {
+      display: flex;
+      /* align-self: flex-start;  */
+      flex-direction: row;
+    }
+    .project-details {
+      flex-direction: column;
+      /* padding-top: 12%; */
+      align-items: start;
+    }
+    .programmes-images {
+      width: 170px;
+    }
+  }
+  @media (max-width: 894px) {
+    .project-txt {
+      width: 750px;
+    }
+    .project-content {
+      align-items: center;
+    }
+    .project-video {
+      width: 750px;
+    }
+    .programmes-images {
+      width: 170px;
+    }
+  }
+  @media (max-width: 830px) {
+    .project-txt {
+      width: 600px;
+    }
+    .project-video {
+      width: 600px;
+    }
+    .programmes-images {
+      width: 170px;
+    }
+  }
+  @media (max-width: 695px) {
+    .project-txt {
+      width: 500px;
+      flex-direction: column;
+    }
+    .project-video {
+      width: 500px;
+    }
+    .programmes-images {
+      width: 430px;
+    }
+  }
+  @media (max-width: 600px) {
+    .project-txt {
+      width: 450px;
+      flex-direction: column;
+    }
+    .project-video {
+      width: 450px;
+    }
+    .programmes-images {
+      width: 350px;
+    }
+  }
+  @media (max-width: 530px) {
+    .project-txt {
+      width: 400px;
+      flex-direction: column;
+    }
+    .project-video {
+      width: 400px;
+    }
+    .programmes-images {
+      width: 270px;
+    }
+  }
+  @media (max-width: 480px) {
+    .project-txt {
+      width: 350px;
+      flex-direction: column;
+    }
+    .project-video {
+      width: 350px;
+    }
+  }
+  @media (max-width: 434px) {
+    .project-txt {
+      width: 300px;
+      flex-direction: column;
+    }
+    .project-video {
+      width: 300px;
+    }
+    .programmes-images {
+      width: 170px;
+    }
+  }
+  @media (max-width: 1239px) {
+    .project-details {
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 463px) {
+    .project-txt {
+      display: flex;
+      align-self: flex-start; 
+      flex-direction: column;
+    }
+  }
+
+  .toggle-butto-programs {
+    width: 180px;
+    margin-bottom: 10%;
+    border: 2px solid grey;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .toggle-butto-programs:hover {
+    background-color: rgb(76, 74, 74);
+    transform: scale(1.1); /* Zoom à 110% */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  .btn-back {
+    width: 100px;
+    margin-bottom: 10%;
+    border: 2px solid grey;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .btn-back:hover {
+    background-color: rgb(76, 74, 74);
+    transform: scale(1.1); /* Zoom à 110% */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+
   /* Flex pour le texte et la vidéo */
   .project-txt, .video-container {
     flex: 1 1 250px;  /* Les deux éléments prennent de l'espace de manière flexible */
@@ -64,7 +255,6 @@
   }
   
   .project-content p {
-    font-size: 1.2rem;
     margin: 8px 0;
   }
   
@@ -92,7 +282,7 @@
   }
   
   .project-image {
-    max-width: 100%;  /* Réduit la taille de l'image pour qu'elle ne dépasse pas le conteneur */
+    max-width: 100%;  
     height: auto;
     border-radius: 8px;
     object-fit: cover;
@@ -101,8 +291,8 @@
   
   /* Espacement et alignement de l'image */
   .project-image-container img {
-    max-width: 50%;
-    height: auto;
+    /* max-width: 600px; */
+    max-height: 500px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
@@ -119,7 +309,31 @@
     justify-content: left;
     align-items: center;
   }
-  
+  .programmes-images {
+    display: flex; /* Aligne les éléments horizontalement */
+    overflow-x: auto; /* Active le défilement horizontal si nécessaire */
+    gap: 10px; /* Ajoute de l'espacement entre les éléments */
+    padding: 10px; /* Ajoute un peu d'espace autour des éléments */
+    white-space: nowrap; /* Empêche les éléments de revenir à la ligne */
+    scrollbar-width: thin; /* Ajuste la largeur de la scrollbar (pour Firefox) */
+}
+.programmes-images::-webkit-scrollbar {
+  height: 6px; /* Hauteur de la barre */
+}
+
+.programmes-images::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la barre */
+  border-radius: 3px;
+}
+
+.programmes-images::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur de la barre au survol */
+}
+
+  .programs-images {
+    min-width: 200px !important;
+    padding: 0 !important;
+  }
   .program-image {
     margin-top: 20px;
     width: 100px;

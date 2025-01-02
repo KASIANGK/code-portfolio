@@ -4,68 +4,46 @@
         "nom": "SideGeek",
         "date": "2024",
         "societe": "Urban Tech",
-        "image": "/src/assets/side.png",
+        "image": ["/src/assets/side.png", "/src/assets/s1.png", "/src/assets/s2.png", "/src/assets/s3.png", "/src/assets/s4.png"],
         "video": "/src/assets/7.mp4",
         "backgroundimage": "/assets/projet2-background.jpg",
         "programmes": "Vue.js, Php, Laravel, MAMP",
         "frontend": "Vue.js",
-        "backend": "Firebase"
+        "backend": "Firebase",
+        "descriptionResponsive": "La plateforme est entièrement responsive, garantissant une accessibilité et une expérience utilisateur optimale sur tous les appareils, y compris mobiles et tablettes.",
+        "descriptionData": "Les données des étudiants et des recruteurs sont gérées de manière sécurisée et dynamique grâce à Laravel, avec une intégration fluide via Vue.js.",
+        "description": "SideGeek est une plateforme dédiée au recrutement d'étudiants, offrant des outils de recherche et de mise en relation intuitifs, tout en utilisant PHP, Laravel, et Vue.js pour assurer robustesse et efficacité."
       },
       {
         "nom": "McDonalds Project",
         "date": "2024",
         "societe": "MolenGeek",
-        "image": "/src/assets/mc.png",
+        "image": ["/src/assets/mc.png", "/src/assets/mcdo-small.png", "/src/assets/mcdo-tablet.png", "/src/assets/m1.png", "/src/assets/m2.png", "/src/assets/m3.png", "/src/assets/m4.png", "/src/assets/m5.png", "/src/assets/mcdoo.png", "/src/assets/mcdooo.png"], 
         "video": "/src/assets/mcdo.mp4",
         "backgroundimage": "/assets/projet2-background.jpg",
-        "programmes": "Vue.js, Firebase",
+        "programmes": "React, JavaScript, CSS",
         "frontend": "Vue.js",
-        "backend": "Firebase"
+        "backend": "Firebase",
+        "descriptionAssets" : "Les images et éléments visuels, ont été créés par mes soins, en me basant sur les produits de la marque, afin d'assurer une cohérence visuelle et une expérience utilisateur optimale. ",
+        "descriptionResponsive" : "Le site est entièrement responsive, offrant une expérience fluide et adaptée à tous les types d'appareils.",
+        "descriptionData" : "Les données des produits sont gérées de manière dynamique avec JSON.",
+        "description": "Le projet consiste en un site web pour un fast-food, avec un système de commande en ligne et livraison."
       },
       {
         "nom": "Sneakers Shop",
         "date": "2024",
         "societe": "Entreprise A",
-        "image": "/src/assets/sneakers.png",
+        "image": ["/src/assets/sneakers.png", "/src/assets/sn2.png", "/src/assets/sn3.png","/src/assets/sn4.png","/src/assets/sn5.png","/src/assets/sn6.png","/src/assets/sn7.png","/src/assets/sn8.png","/src/assets/sn10.png"],
         "image-hover": "/src/assets/snlight.png",
         "video": "/src/assets/sn.mp4",
         "backgroundimage": "/assets/projet1-background.jpg",
-        "programmes": "React, Node.js, MongoDB",
+        "programmes": "React, JavaScript, Sass",
         "frontend": "React, JavaScript",
-        "backend": "Node.js, Express"
-      },
-      {
-        "nom": "Anime Library",
-        "date": "2024",
-        "societe": "",
-        "image": "/src/assets/anime.png",
-        "video": "/src/assets/anime.mp4",
-        "backgroundimage": "/assets/projet2-background.jpg",
-        "programmes": "Vue.js, Firebase",
-        "frontend": "Vue.js",
-        "backend": "Firebase"
-      },
-      {
-        "nom": "Projet 4",
-        "date": "2024",
-        "societe": "Entreprise B",
-        "image": "/src/assets/todo.jpg",
-        "video": "/assets/projet2-video.mp4",
-        "backgroundimage": "/assets/projet2-background.jpg",
-        "programmes": "Vue.js, Firebase",
-        "frontend": "Vue.js",
-        "backend": "Firebase"
-      },
-      {
-        "nom": "MolenGame Project",
-        "date": "2024",
-        "societe": "Hackaton WebDev MG",
-        "image": "/src/assets/molengame.jpg",
-        "video": "/src/assets/mg.mp4",
-        "backgroundimage": "/assets/projet2-background.jpg",
-        "programmes": "Figma, JavaScript, Blender",
-        "frontend": "Vue.js",
-        "backend": "Firebase"
+        "backend": "Node.js, Express",
+        "description": "Conception et réalisation d'un site web dédié à la vente de sneakers avec dark et light mode.",
+        "descriptionAssets" : " L'intégralité des assets visuels a été créée par mes soins pour refléter l'univers des sneakers et renforcer l'identité visuelle du site.",
+        "descriptionResponsive" : "L'approche responsive design garantit une expérience utilisateur fluide et harmonieuse sur tous les appareils.",
+        "descriptionData" : "Le site intègre une base de données JSON pour gérer dynamiquement les informations sur les produits, facilitant la mise à jour des collections."
       }
     ]
   }

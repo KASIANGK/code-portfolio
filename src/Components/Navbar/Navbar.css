@@ -18,6 +18,10 @@
   width: 45px;
 
 }
+.navbar-logo-gif-skills {
+  width: 57px;
+
+}
 .navbar-logo {
   color: #fff;
   font-size: 24px;
@@ -130,3 +134,46 @@
     background-color: lightblue;
   }
 } */
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.hamburger .bar {
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Media Query pour les petits écrans */
+@media (max-width: 648px) {
+  .navbar-links {
+      display: none;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+  }
+
+  .navbar-links li {
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+  }
+
+  .navbar-links.active {
+      display: block;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+}

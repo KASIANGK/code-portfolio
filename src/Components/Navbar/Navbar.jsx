@@ -5,6 +5,7 @@ import logo from '../../assets/Sujet.png';
 import portfolio from '../../assets/folder.png'; 
 import about from '../../assets/about.png'; 
 import siri from '../../assets/siri.png'; 
+import skills from '../../assets/skills.png'
 
 
 // import logoGif from '../../assets/waving.gif'; 
@@ -16,9 +17,16 @@ import { useTheme } from '../../ThemeContext';
 function Navbar() {
   const { isLightMode, toggleMode } = useTheme();
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
 
   const toggleLangMenu = () => {
     setIsLangMenuOpen(prevState => !prevState);
+  };
+
+  // Fonction pour basculer l'état (ouvrir/fermer)
+  const toggleMenu = () => {
+    setIsOpen(prevState => !prevState);
   };
 
 
@@ -35,12 +43,6 @@ function Navbar() {
     setIsDay(newIsDay);
 
 
-
-    // for (let i = 0; i < infinity; i++) {
-    //   code(),
-    //   drinkCoffee(),
-    //   repeat()
-    // }
 
     if (newIsDay) {
       gsap.to("#sun", 1, { x: 15, opacity: 1, ease: Power1.easeInOut });
@@ -59,6 +61,15 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    if (hamburgerMenu) {
+      hamburgerMenu.classList.toggle('active');
+    }
+  }, []);
+  
+
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -67,10 +78,34 @@ function Navbar() {
         </Link>
         <p></p>
       </div>
+      <div className="hamburger" id="hamburger" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+      </div>
+      {/* Affichage conditionnel du menu */}
+      <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
+        <li>
+          <Link to="/portfolio">
+            <img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/about">
+            <img src={about} alt="About" className="navbar-logo-gif-about" title="About"/>
+          </Link>
+        </li>
+        <li>
+          <Link to="/skills">
+            <img src={skills} alt="Skills" className="navbar-logo-gif-skills" title="Skills"/>
+          </Link>
+        </li>
+      </ul>
       <ul className="navbar-links">
         {/* <li><Link to="/">Home</Link></li> */}
-        <li><Link to="/portfolio"><img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" /></Link></li>
+        {/* <li><Link to="/portfolio"><img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" /></Link></li>
         <li><Link to="/about"><img src={about} alt="About" className="navbar-logo-gif-about" title="About"/></Link></li>
+        <li><Link to="/skills"><img src={skills} alt="Skills" className="navbar-logo-gif-skills" title="Skills"/></Link></li> */}
 
         {/* <li className="navbar-lang">
           <button onClick={toggleLangMenu} className="lang-button"><img src={siri} alt="Language" className="navbar-logo-gif" /></button>

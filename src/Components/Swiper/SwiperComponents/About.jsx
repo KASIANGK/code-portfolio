@@ -50,10 +50,9 @@ function About() {
               {/* <Players></Players> */}
               <AboutPresentation></AboutPresentation>
           </SwiperSlide>
-          <SwiperSlide>
-              {/* <Players></Players> */}
+          {/* <SwiperSlide>
               <AboutSkills></AboutSkills>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>

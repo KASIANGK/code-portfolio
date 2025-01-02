@@ -2,7 +2,7 @@
     "skills": [
       {
         "name": "HTML",
-        "level": 90,
+        "level": 100,
         "image": "/src/assets/ht.png",
         "description": "Maîtrise du HTML5 et des bonnes pratiques.",
         "category": "Frontend",
@@ -10,15 +10,15 @@
       },
       {
         "name": "CSS",
-        "level": 85,
+        "level": 100,
         "image": "/src/assets/css3.png",
         "description": "Création de layouts responsives et animations CSS.",
         "category": "Frontend",
-        "background-color": "#6B3A9C"
+        "background-color": "#B0DAE8"
       },
       {
         "name": "JavaScript",
-        "level": 80,
+        "level": 100,
         "image": "/src/assets/js.png",
         "description": "Programmation dynamique avec ES6+.",
         "category": "Frontend",
@@ -26,7 +26,7 @@
       },
       {
         "name": "React",
-        "level": 75,
+        "level": 90,
         "image": "/src/assets/react.png",
         "description": "Création d’applications interactives avec React.",
         "category": "Frontend",
@@ -34,23 +34,23 @@
       },
       {
         "name": "Node.js",
-        "level": 70,
+        "level": 90,
         "image": "/src/assets/node.png",
         "description": "Développement backend avec Node.js et Express.",
         "category": "Backend",
-        "background-color": "#857BD0"
+        "background-color": "white"
       },
       {
         "name": "Git",
         "image": "/src/assets/git.png",
-        "level": 95,
+        "level": 90,
         "description": "Gestion de version avec Git et GitHub.",
         "category": "Logiciels",
         "background-color": "#83C7FE"
       },
       {
         "name": "Photoshop",
-        "level": 65,
+        "level": 100,
         "image": "/src/assets/pho.png",
         "description": "Création et édition d’images avec Photoshop.",
         "category": "Logiciels",
@@ -59,7 +59,7 @@
       },
       {
         "name": "Sass",
-        "level": 80,
+        "level": 100,
         "image": "/src/assets/sass.png",
         "description": "Préprocesseur CSS pour un code plus propre et structuré.",
         "category": "Frontend",
@@ -67,7 +67,7 @@
       },
       {
         "name": "Vue.js",
-        "level": 70,
+        "level": 80,
         "image": "/src/assets/Vue.png",
         "description": "Framework JavaScript pour des interfaces utilisateur dynamiques.",
         "category": "Frontend",
@@ -75,7 +75,7 @@
       },
       {
         "name": "Nuxt.js",
-        "level": 65,
+        "level": 80,
         "image": "/src/assets/nuxt.png",
         "description": "Framework pour créer des applications Vue.js côté serveur.",
         "category": "Frontend",
@@ -84,7 +84,7 @@
       },
       {
         "name": "Next.js",
-        "level": 80,
+        "level": 90,
         "image": "/src/assets/next-js.svg",
         "description": "Framework React pour des applications côté serveur.",
         "category": "Frontend",
@@ -92,7 +92,7 @@
       },
       {
         "name": "PHP",
-        "level": 60,
+        "level": 70,
         "image": "/src/assets/pp.png",
         "description": "Langage de programmation pour le développement backend.",
         "category": "Backend",
@@ -100,7 +100,7 @@
       },
       {
         "name": "Django Rest Framework",
-        "level": 70,
+        "level": 90,
         "image": "/src/assets/DJJ.png",
         "description": "Framework pour créer des APIs avec Django.",
         "category": "Backend",
@@ -108,7 +108,7 @@
       },
       {
         "name": "Python",
-        "level": 75,
+        "level": 95,
         "image": "/src/assets/P.png",
         "description": "Langage de programmation pour le développement backend.",
         "category": "Backend",
@@ -116,7 +116,7 @@
       },
       {
         "name": "Laravel",
-        "level": 65,
+        "level": 70,
         "image": "/src/assets/LARA.png",
         "description": "Framework PHP pour le développement backend rapide.",
         "category": "Backend",
@@ -124,15 +124,15 @@
       },
       {
         "name": "Blender",
-        "level": 50,
+        "level": 90,
         "image": "/src/assets/blender.svg",
         "description": "Logiciel de modélisation 3D.",
         "category": "Logiciels",
-        "background-color": "white"
+        "background-color": "#2C1E59"
       },
       {
         "name": "Premiere Pro",
-        "level": 60,
+        "level": 100,
         "image": "/src/assets/pr.png",
         "description": "Logiciel de montage vidéo.",
         "category": "Logiciels",
@@ -140,7 +140,7 @@
       },
       {
         "name": "Final Cut Pro",
-        "level": 55,
+        "level": 90,
         "image": "/src/assets/fin.png",
         "description": "Logiciel de montage vidéo professionnel.",
         "category": "Logiciels",
@@ -148,7 +148,7 @@
       },
       {
         "name": "Procreate",
-        "level": 70,
+        "level": 100,
         "image": "/src/assets/pro.png",
         "description": "Application de dessin pour tablettes.",
         "category": "Logiciels",
@@ -156,7 +156,7 @@
       },
       {
         "name": "DBeaver",
-        "level": 70,
+        "level": 100,
         "image": "/src/assets/DB.svg.png",
         "description": "Application de dessin pour tablettes.",
         "category": "Backend",
@@ -164,15 +164,15 @@
       },
       {
         "name": "Three.js",
-        "level": 65,
+        "level": 90,
         "image": "/src/assets/thr.png",
         "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
         "category": "Bibliothèques",
-        "background-color": "#EB8617"
+        "background-color": "#2C1E59"
       },
       {
         "name": "MYSQL",
-        "level": 65,
+        "level": 90,
         "image": "/src/assets/Mysql_logo.png",
         "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
         "category": "Bibliothèques",
@@ -180,7 +180,7 @@
       },
       {
         "name": "MAMP",
-        "level": 65,
+        "level": 100,
         "image": "/src/assets/mamp-viewer.png",
         "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
         "category": "Bibliothèques",
@@ -188,7 +188,7 @@
       },
       {
         "name": "Figma",
-        "level": 65,
+        "level": 90,
         "image": "/src/assets/figma.png",
         "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
         "category": "Logiciels",
@@ -196,7 +196,7 @@
       },
       {
         "name": "FlutterFlow",
-        "level": 65,
+        "level": 70,
         "image": "/src/assets/flutter.png",
         "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
         "category": "Logiciels",
@@ -204,7 +204,7 @@
       },
       {
         "name": "Dart",
-        "level": 65,
+        "level": 70,
         "image": "/src/assets/dart.png",
         "description": "Bibliothèque JavaScript pour la création de graphismes 3D.",
         "category": "Frontend",

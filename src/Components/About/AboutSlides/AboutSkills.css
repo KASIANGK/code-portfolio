@@ -7,6 +7,11 @@
   align-items: center;
   background-color: #403f3f;
   text-align: center;
+  min-height: 100vh;
+  max-height: fit-content;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  /* background-image: '/src/assets/'; */
 }
 
 .about-skills h1 {
@@ -129,7 +134,7 @@
 .search-bar input {
   padding: 8px;
   width: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
@@ -137,6 +142,7 @@
 
 .search-bar {
   padding-bottom: 30px;
+  width: 300px;
 }
 
 .search-filter {
@@ -144,6 +150,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  margin-top: 7%;
+}
+@media (max-width: 742px) {
+  .search-filter {
+    flex-direction: column-reverse;
+  }
 }
 
 .category-filter button {
@@ -151,9 +164,15 @@
   padding: 10px;
   cursor: pointer;
 }
-
+.category-filter button:hover {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #555;
+}
 .category-filter {
   padding-bottom: 40px;
+  width: 500px;
 }
 
 /* Cartes des compétences - Effet image (section .ag-courses_item) */
@@ -546,4 +565,27 @@ body {
   color: white;
   text-align: center;
   font-size: 14px;
+}
+
+
+
+
+.selected-category-skills {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.selected-category-skills h3 {
+  margin-bottom: 10px;
+}
+
+.selected-category-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.selected-category-skills li {
+  padding: 5px 0;
 }
