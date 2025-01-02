@@ -18,6 +18,8 @@ function Navbar() {
   const { isLightMode, toggleMode } = useTheme();
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [isLightModePop, setIsLightModePop] = useState(true); // Par défaut, mode clair
 
 
   const toggleLangMenu = () => {
@@ -69,6 +71,20 @@ function Navbar() {
   }, []);
   
 
+  // Fonction pour afficher la pop-up quand le mode clair est activé
+  useEffect(() => {
+    if (isLightMode) {
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 5000);
+    }
+  }, [isLightMode]); // Cette fonction sera appelée chaque fois que isLightMode change
+
+  // Fonction pour basculer le mode
+  const handleModeChange = () => {
+    toggleMode(); // Change le mode
+  };
 
   return (
     <nav className="navbar">
@@ -101,29 +117,36 @@ function Navbar() {
           </Link>
         </li>
       </ul>
-      <ul className="navbar-links">
-        {/* <li><Link to="/">Home</Link></li> */}
-        {/* <li><Link to="/portfolio"><img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" /></Link></li>
-        <li><Link to="/about"><img src={about} alt="About" className="navbar-logo-gif-about" title="About"/></Link></li>
-        <li><Link to="/skills"><img src={skills} alt="Skills" className="navbar-logo-gif-skills" title="Skills"/></Link></li> */}
-
-        {/* <li className="navbar-lang">
-          <button onClick={toggleLangMenu} className="lang-button"><img src={siri} alt="Language" className="navbar-logo-gif" /></button>
-          <div className={`lang-menu ${isLangMenuOpen ? 'open' : ''}`}>
-            <p><a href="#">🇫🇷</a></p>
-            <p><a href="#">🇬🇧</a></p>
-            <p><a href="#">🇵🇱</a></p>
-            <p><a href="#">🇳🇱</a></p>
-          </div>
-        </li> */}
+      <ul className="navbar-links-second">
+        <li>
+          <Link to="/portfolio">
+            <img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/about">
+            <img src={about} alt="About" className="navbar-logo-gif-about" title="About"/>
+          </Link>
+        </li>
+        <li>
+          <Link to="/skills">
+            <img src={skills} alt="Skills" className="navbar-logo-gif-skills" title="Skills"/>
+          </Link>
+        </li>
         <li>
           <div className="body">
             <div id="background"></div>
 
             <div onClick={handleToggle} id={isDay ? "day" : "night"} className="switch-button">        
-              <button onClick={toggleMode} className="mode-button invisble-button">
+              <button onClick={handleModeChange} className="mode-button invisble-button">
                 {isLightMode ? '' : ''}
-              </button></div>
+              </button>
+            </div>
+            {showPopup && isLightMode && (
+              <div className="popup">
+                <p>Work in progress, please, join the dark side, we have cookies!</p>
+              </div>
+            )}
             <div id="background"></div>
 
 

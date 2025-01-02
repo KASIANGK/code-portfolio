@@ -142,3 +142,66 @@ body.light-mode button:hover {
     height: 100vh !important;
   }
 }
+
+
+
+
+
+
+
+.portfolio {
+  position: relative; /* Ensures that everything inside can be positioned relative to it */
+}
+
+.video-container {
+  position: relative; /* The container will act as a reference point for absolute positioning */
+}
+
+.main-video {
+  width: 100%; /* Ensure the video takes up the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.cards-container-cv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the cards in the middle of the video */
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+  flex-wrap: wrap;
+  width: 80%; /* Adjust width as needed */
+  z-index: 10; /* Make sure the cards appear on top of the video */
+}
+
+.card-cv {
+  width: 30%;
+  padding: 20px;
+  background-color: rgba(18, 17, 17, 0.93); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default light shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
+}
+.card-cv:hover {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); /* Uniform bright white glow */
+  transform: translateY(-15px); /* Slight lift effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.card-cv h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-cv .media-container {
+  margin-top: 10px;
+}
+
+.card-cv .media-item {
+  margin: 10px 0;
+}

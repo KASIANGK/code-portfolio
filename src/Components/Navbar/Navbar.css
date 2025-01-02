@@ -59,6 +59,33 @@
   font-style: italic;
 }
 
+.navbar-links-second {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links-second li {
+  margin-left: 40px;
+}
+.navbar-links-second .body {
+  margin-left: -30px;
+}
+
+.navbar-links-second a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-links-second a:hover {
+  color: rgb(255, 115, 0);
+  font-style: italic;
+}
+
 /* Styles pour le menu déroulant */
 .lang-menu {
   display: none; 
@@ -176,4 +203,36 @@
   .hamburger {
       display: flex;
   }
+  .navbar-links-second {
+    display: none;
+  }
+}
+
+
+
+
+.popup {
+  position: fixed;
+  /* bottom: 20px; */
+  top: 120px;
+  transform: translateX(-50%);
+  background-color: #3f1414;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.navbar-links {
+  display: none;
+}
+
+.navbar-links.open {
+  display: block;
 }

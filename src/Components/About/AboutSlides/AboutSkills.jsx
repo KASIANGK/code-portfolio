@@ -58,7 +58,20 @@ function AboutSkills() {
   console.log(categoryFilter);  // Vérifie la catégorie sélectionnée
   console.log(skills.map(skill => skill.category));  // Vérifie toutes les catégories disponibles
 
+// skill.color_category
+  function hexToRgb(hex) {
+    // Remove the hash at the start if it's there
+    hex = hex.replace(/^#/, '');
+    
+    // Parse the r, g, b values
+    let r = parseInt(hex.substr(0, 2), 16);
+    let g = parseInt(hex.substr(2, 2), 16);
+    let b = parseInt(hex.substr(4, 2), 16);
+  
+    return `${r}, ${g}, ${b}`;
+  }
 
+  
   return (
     <div className="about-skills">
       <div className="search-filter">
@@ -77,8 +90,9 @@ function AboutSkills() {
           <button onClick={() => setCategoryFilter('All')}>All</button>
           <button onClick={() => setCategoryFilter('Frontend')}>Frontend</button>
           <button onClick={() => setCategoryFilter('Backend')}>Backend</button>
-          <button onClick={() => setCategoryFilter('Logiciels')}>Logiciels</button>
-          <button onClick={() => setCategoryFilter('Bibliothèques')}>Bibliothèques</button>
+          <button onClick={() => setCategoryFilter('Software')}>Software</button>
+          <button onClick={() => setCategoryFilter('Libraries')}>Libraries</button>
+          <button onClick={() => setCategoryFilter('Framework')}>Framework</button>
         </div>
       </div>
 
@@ -86,7 +100,10 @@ function AboutSkills() {
       <div className="ag-courses_box">
         {currentSkills.map((skill, index) => (
           <section key={index} className="ag-courses_item">
-            <div className="ag-courses-item_link">
+            <div className="ag-courses-item_link"
+              style={{
+                backgroundColor: `rgba(${hexToRgb(skill.color_category)}, 0.5)`  
+              }}>
               <div
                 className="ag-courses-item_bg"
                 style={{

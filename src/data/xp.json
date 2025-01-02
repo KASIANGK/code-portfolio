@@ -1,0 +1,45 @@
+{
+    "cards": [
+      {
+        "title": "Web CV",
+        "description": "View my web CV and resume.",
+        "media": [
+          {
+            "type": "video",
+            "src": "/path/to/video.mp4"
+          },
+          {
+            "type": "pdf",
+            "src": "/path/to/cv.pdf",
+            "downloadable": true
+          }
+        ]
+      },
+      {
+        "title": "Hobbies",
+        "description": "Explore my personal hobbies and interests.",
+        "media": [
+          {
+            "type": "video",
+            "src": "/path/to/hobbies-video.mp4"
+          }
+        ]
+      },
+      {
+        "title": "3D",
+        "description": "See my 3D work and projects.",
+        "media": [
+          {
+            "type": "video",
+            "src": "/path/to/3d-video.mp4"
+          },
+          {
+            "type": "pdf",
+            "src": "/path/to/3d-projects.pdf",
+            "downloadable": true
+          }
+        ]
+      }
+    ]
+  }
+  
