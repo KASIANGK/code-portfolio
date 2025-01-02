@@ -150,47 +150,47 @@ body.light-mode button:hover {
 
 
 .portfolio {
-  position: relative; /* Ensures that everything inside can be positioned relative to it */
+  position: relative; 
 }
 
 .video-container {
-  position: relative; /* The container will act as a reference point for absolute positioning */
+  position: relative; 
 }
 
 .main-video {
-  width: 100%; /* Ensure the video takes up the full width of the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  height: auto; 
 }
 
 .cards-container-cv {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the cards in the middle of the video */
+  transform: translate(-50%, -50%); 
   display: flex;
   justify-content: space-around;
   padding-top: 5%;
   flex-wrap: wrap;
-  width: 80%; /* Adjust width as needed */
-  z-index: 10; /* Make sure the cards appear on top of the video */
+  width: 80%; 
+  z-index: 10; 
 }
 
 .card-cv {
   width: 30%;
   padding: 20px;
-  background-color: rgba(18, 17, 17, 0.93); /* Semi-transparent background */
+  background-color: rgba(18, 17, 17, 0.93); 
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default light shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 .card-cv:hover {
-  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); /* Uniform bright white glow */
-  transform: translateY(-15px); /* Slight lift effect */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+  transform: translateY(-15px); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
 
 .card-cv h3 {
