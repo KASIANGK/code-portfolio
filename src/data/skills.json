@@ -3,7 +3,7 @@
     {
       "name": "HTML",
       "level": 100,
-      "image": "/src/assets/ht.png",
+      "image": "/assets/ht.png",
       "description": "Mastery of HTML5 and best practices.",
       "category": "Frontend",
       "background-color": "#B0DAE8",
@@ -12,7 +12,7 @@
     {
       "name": "CSS",
       "level": 100,
-      "image": "/src/assets/css3.png",
+      "image": "/assets/css3.png",
       "description": "Creating responsive layouts and CSS animations.",
       "category": "Frontend",
       "background-color": "#B0DAE8",
@@ -21,7 +21,7 @@
     {
       "name": "JavaScript",
       "level": 100,
-      "image": "/src/assets/js.png",
+      "image": "/assets/js.png",
       "description": "Dynamic programming with ES6+.",
       "category": "Frontend",
       "background-color": "#EFD81A",
@@ -30,7 +30,7 @@
     {
       "name": "React",
       "level": 90,
-      "image": "/src/assets/react.png",
+      "image": "/assets/react.png",
       "description": "Building interactive applications with React.",
       "category": "Framework",
       "background-color": "#FBA3E4",
@@ -39,7 +39,7 @@
     {
       "name": "Node.js",
       "level": 90,
-      "image": "/src/assets/node.png",
+      "image": "/assets/node.png",
       "description": "Backend development with Node.js and Express.",
       "category": "Backend",
       "background-color": "white",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Git",
-      "image": "/src/assets/git.png",
+      "image": "/assets/git.png",
       "level": 90,
       "description": "Version control with Git and GitHub.",
       "category": "Software",
@@ -57,7 +57,7 @@
     {
       "name": "Photoshop",
       "level": 100,
-      "image": "/src/assets/pho.png",
+      "image": "/assets/pho.png",
       "description": "Creating and editing images with Photoshop.",
       "category": "Software",
       "background-color": "#08253C",
@@ -66,7 +66,7 @@
     {
       "name": "Sass",
       "level": 100,
-      "image": "/src/assets/sass.png",
+      "image": "/assets/sass.png",
       "description": "CSS preprocessor for cleaner, structured code.",
       "category": "Frontend",
       "background-color": "#B0DAE8",
@@ -75,7 +75,7 @@
     {
       "name": "Vue.js",
       "level": 80,
-      "image": "/src/assets/Vue.png",
+      "image": "/assets/Vue.png",
       "description": "JavaScript framework for dynamic user interfaces.",
       "category": "Framework",
       "background-color": "#FEBB30",
@@ -84,7 +84,7 @@
     {
       "name": "Nuxt.js",
       "level": 80,
-      "image": "/src/assets/nuxt.png",
+      "image": "/assets/nuxt.png",
       "description": "Framework for building server-side applications with Vue.js.",
       "category": "Framework",
       "background-color": "white",
@@ -93,7 +93,7 @@
     {
       "name": "Next.js",
       "level": 90,
-      "image": "/src/assets/next-js.svg",
+      "image": "/assets/next-js.svg",
       "description": "React framework for server-side applications.",
       "category": "Framework",
       "background-color": "white",
@@ -102,7 +102,7 @@
     {
       "name": "PHP",
       "level": 70,
-      "image": "/src/assets/pp.png",
+      "image": "/assets/pp.png",
       "description": "Programming language for backend development.",
       "category": "Backend",
       "background-color": "#4F5B93",
@@ -111,7 +111,7 @@
     {
       "name": "Django Rest Framework",
       "level": 90,
-      "image": "/src/assets/DJJ.png",
+      "image": "/assets/DJJ.png",
       "description": "Framework for building APIs with Django.",
       "category": "Backend",
       "background-color": "#073C2A",
@@ -120,7 +120,7 @@
     {
       "name": "Python",
       "level": 95,
-      "image": "/src/assets/P.png",
+      "image": "/assets/P.png",
       "description": "Programming language for backend development.",
       "category": "Backend",
       "background-color": "#5F6368",
@@ -129,7 +129,7 @@
     {
       "name": "Laravel",
       "level": 70,
-      "image": "/src/assets/LARA.png",
+      "image": "/assets/LARA.png",
       "description": "PHP framework for rapid backend development.",
       "category": "Framework",
       "background-color": "white",
@@ -138,7 +138,7 @@
     {
       "name": "Blender",
       "level": 90,
-      "image": "/src/assets/blender.svg",
+      "image": "/assets/blender.svg",
       "description": "3D modeling software.",
       "category": "Software",
       "background-color": "#2C1E59",
@@ -147,7 +147,7 @@
     {
       "name": "Premiere Pro",
       "level": 100,
-      "image": "/src/assets/pr.png",
+      "image": "/assets/pr.png",
       "description": "Video editing software.",
       "category": "Software",
       "background-color": "#03005B",
@@ -156,7 +156,7 @@
     {
       "name": "Final Cut Pro",
       "level": 90,
-      "image": "/src/assets/fin.png",
+      "image": "/assets/fin.png",
       "description": "Professional video editing software.",
       "category": "Software",
       "background-color": "#CCCCFF",
@@ -165,7 +165,7 @@
     {
       "name": "Procreate",
       "level": 100,
-      "image": "/src/assets/pro.png",
+      "image": "/assets/pro.png",
       "description": "Drawing app for tablets.",
       "category": "Software",
       "background-color": "#232323",
@@ -174,7 +174,7 @@
     {
       "name": "DBeaver",
       "level": 100,
-      "image": "/src/assets/DB.svg.png",
+      "image": "/assets/DB.svg.png",
       "description": "Database management tool.",
       "category": "Backend",
       "background-color": "white",
@@ -183,7 +183,7 @@
     {
       "name": "Three.js",
       "level": 90,
-      "image": "/src/assets/thr.png",
+      "image": "/assets/thr.png",
       "description": "JavaScript library for creating 3D graphics.",
       "category": "Libraries",
       "background-color": "#2C1E59",
@@ -192,7 +192,7 @@
     {
       "name": "MYSQL",
       "level": 90,
-      "image": "/src/assets/Mysql_logo.png",
+      "image": "/assets/Mysql_logo.png",
       "description": "JavaScript library for creating 3D graphics.",
       "category": "Libraries",
       "background-color": "#CBA3DD",
@@ -201,7 +201,7 @@
     {
       "name": "MAMP",
       "level": 100,
-      "image": "/src/assets/mamp-viewer.png",
+      "image": "/assets/mamp-viewer.png",
       "description": "JavaScript library for creating 3D graphics.",
       "category": "Libraries",
       "background-color": "#2D80B2",
@@ -210,7 +210,7 @@
     {
       "name": "Figma",
       "level": 90,
-      "image": "/src/assets/figma.png",
+      "image": "/assets/figma.png",
       "description": "JavaScript library for creating 3D graphics.",
       "category": "Software",
       "background-color": "#2D80B2",
@@ -219,7 +219,7 @@
     {
       "name": "FlutterFlow",
       "level": 70,
-      "image": "/src/assets/flutter.png",
+      "image": "/assets/flutter.png",
       "description": "JavaScript library for creating 3D graphics.",
       "category": "Software",
       "background-color": "#2D80B2",
@@ -228,7 +228,7 @@
     {
       "name": "Dart",
       "level": 70,
-      "image": "/src/assets/dart.png",
+      "image": "/assets/dart.png",
       "description": "JavaScript library for creating 3D graphics.",
       "category": "Frontend",
       "background-color": "#2D80B2",
