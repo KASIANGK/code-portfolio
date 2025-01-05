@@ -6,7 +6,7 @@ import "swiper/css/mousewheel";
 import { Link } from 'react-router-dom'; 
 import { useTheme } from '../../../ThemeContext'; 
 import './Portfolio.css';
-import lightModeVideo from '/src/assets/transition-ah.mp4';
+import lightModeVideo from '/transition-ah.mp4';
 import { Navigation, Pagination, Mousewheel } from 'swiper/modules'; 
 import PortfolioResume from '../../Portfolio/PortfolioResume';
 import teamHoverImage from '/assets/about.png';  

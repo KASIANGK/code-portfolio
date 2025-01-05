@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel"; 
-import lightModeVideo from '/src/assets/switchpp.mp4';
-import lightModeVideobis from '/src/assets/all.mp4';
+import lightModeVideo from '/switchpp.mp4';
+import lightModeVideobis from '/all.mp4';
 
 
 function PortfolioResume() {
