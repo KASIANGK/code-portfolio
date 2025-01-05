@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 // import lightModeVideooo from '/src/assets/abb.mp4';
-import lightModeVideooo from '/aboutgrain.mp4';
+import lightModeVideooo from '/src/assets/aboutgrain.mp4';
 
 import './About.css';
 import { useTheme } from '../../../ThemeContext'; 
