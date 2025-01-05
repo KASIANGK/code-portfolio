@@ -26,11 +26,11 @@ function About() {
           pagination={{ clickable: true }}
           spaceBetween={7}
           slidesPerView={1}
-          allowTouchMove={true} // Active le swipe par trackpad et tactile
+          allowTouchMove={true} // active le swipe par trackpad et tactile
           navigation={false} 
-          mousewheel={true} // Ajoute la gestion des gestes trackpad et molette
-          cssMode={true} // Ajoute la compatibilité avec le scroll natif du navigateur
-          modules={[Navigation, Pagination, Mousewheel]} // Ajouter Mousewheel ici
+          mousewheel={true} // ajoute la gestion des gestes trackpad et molette
+          cssMode={true} // ajoute la compatibilite avec le scroll natif du navigateur
+          modules={[Navigation, Pagination, Mousewheel]} // ajouter Mousewheel ici
           // style={{ height: '100vh' }} 
         >
           <SwiperSlide>
@@ -61,36 +61,3 @@ function About() {
 
 export default About;
 
-
-// import React, { useEffect, useRef, useState } from 'react';
-// // import lightModeVideooo from '../../assets/about.mp4';
-// import lightModeVideooo from '../../assets/ab.mp4';
-
-// import './About.css';
-// import { useTheme } from '../../ThemeContext'; 
-
-
-// function About() {
-//   const [loading, setLoading] = useState(false);
-//   const { isLightMode } = useTheme();
-
-
-//   return (
-//     <div className={`home-homebis ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
-
-//         <div className=''>
-//             {loading && <div className="loading">Loading...</div>}
-//             <video
-//             className="main-video video-about"
-//             autoPlay
-//             muted
-//             >
-//             <source src={lightModeVideooo} type="video/mp4" />
-//             Votre navigateur ne supporte pas la balise vidéo.
-//             </video>
-//         </div>
-//     </div>
-//   );
-// }
-
-// export default About;

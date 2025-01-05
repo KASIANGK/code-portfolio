@@ -1,33 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import portfolio from '/src/data/portfolio.json';  // Assurez-vous du bon chemin vers le fichier JSON
-import skillsData from '/src/data/skills.json'; // Importer le fichier skills.json
+import portfolio from '/src/data/portfolio.json';  
+import skillsData from '/src/data/skills.json'; 
 import './PortfolioDetails.css';
 import Footer from '../Footer/Footer'
 
 const PortfolioDetails = () => {
-  const { id } = useParams();  // Récupère l'ID du projet depuis l'URL
+  const { id } = useParams();  // recup id du projet depuis l'URL
   const [project, setProject] = useState(null);
-  const [isProgrammesVisible, setIsProgrammesVisible] = useState(false);  // Etat pour gérer l'affichage de la div dépliante
+  const [isProgrammesVisible, setIsProgrammesVisible] = useState(false);  
   const navigate = useNavigate()
 
-  // Charger le projet spécifique à partir du JSON
+  // charger le projet specifique
   useEffect(() => {
     const selectedProject = portfolio.portfolio[id];
     setProject(selectedProject);
   }, [id]);
 
-  // Si le projet n'est pas encore chargé, afficher un message de chargement
   if (!project) {
     return <div>Loading...</div>;
   }
 
-  // Fonction pour afficher/masquer la div dépliante des programmes
+  // fonction pour afficher/masquer la div depliante des programmes
   const toggleProgrammesVisibility = () => {
     setIsProgrammesVisible(!isProgrammesVisible);
   };
 
-  // Récupérer les compétences correspondantes aux programmes utilisés dans le projet
+  // Recuperer les competences correspondantes aux programmes utilises dans le projet
   const usedSkills = project.programmes.split(',').map(program => {
     return skillsData.skills.filter(skill => skill.name.toLowerCase() === program.trim().toLowerCase());
   }).flat();
@@ -43,7 +42,7 @@ const PortfolioDetails = () => {
         backgroundPosition: 'center',
       }}
       ></div>     
-      {/* Contenu du projet */}
+      {/* contenu du projet */}
       <div className="project-content">
           <div className='project-txt'>
               {/* <h1>{project.nom}</h1> */}
@@ -65,14 +64,14 @@ const PortfolioDetails = () => {
               {/* <p><strong>Frontend : </strong>{project.frontend}</p>
               <p><strong>Backend : </strong>{project.backend}</p> */}
               
-              {/* Div des programmes */}
+              {/* div des programmes */}
               <div className="programmes-details">
               <button className="toggle-butto-programs" onClick={toggleProgrammesVisibility}>
                   {isProgrammesVisible ? "Hide tools" : "See the tools used"}
               </button>
               {/* <button className='btn-back'>BACK</button> */}
               
-              {/* Si la div est visible, afficher les programmes */}
+              {/* si la div est visible, afficher les programmes */}
               {isProgrammesVisible && (
                   <div className="programmes-images">
                   {usedSkills.length > 0 ? (
@@ -106,7 +105,7 @@ const PortfolioDetails = () => {
         </div>
       </div>
       
-      {/* Section vidéo */}
+      {/* section video */}
       <div className="details-visu">
 
 

@@ -16,7 +16,7 @@ function AboutSkills() {
     }
   }, []);
 
-  // recherche/filtre skills selon la catégorie et le terme 
+  // recherche/filtre skills selon la categorie et le terme 
   const filteredSkills = skills.filter(skill => {
     const matchesCategory = categoryFilter === 'All' || skill.category === categoryFilter;
     const matchesSearch = skill.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -24,7 +24,7 @@ function AboutSkills() {
   });
   
 
-  // compétences à afficher par page
+  // competences a afficher par page
   const indexOfLastSkill = currentPage * skillsPerPage;
   const indexOfFirstSkill = indexOfLastSkill - skillsPerPage;
   const currentSkills = filteredSkills.slice(indexOfFirstSkill, indexOfLastSkill);
@@ -32,10 +32,10 @@ function AboutSkills() {
   // calcul du nombre total de pages
   const totalPages = Math.ceil(filteredSkills.length / skillsPerPage);
 
-  // afficher les étoiles en fonction du niveau
+  // afficher les etoiles en fonction du niveau
     const renderStars = (level) => {
       const maxStars = 5;
-      const filledStars = Math.round(level / 20); // calcul du nombre d'étoiles remplies
+      const filledStars = Math.round(level / 20); // calcul du nombre d'etoiles remplies
     
       let stars = [];
       for (let i = 0; i < maxStars; i++) {
@@ -55,15 +55,15 @@ function AboutSkills() {
     setCurrentPage(pageNumber);
   };
 
-  console.log(categoryFilter);  // Vérifie la catégorie sélectionnée
-  console.log(skills.map(skill => skill.category));  // Vérifie toutes les catégories disponibles
+  console.log(categoryFilter);  
+  console.log(skills.map(skill => skill.category));  
 
 // skill.color_category
   function hexToRgb(hex) {
-    // Remove the hash at the start if it's there
+    // remove the hash at the start if it's there
     hex = hex.replace(/^#/, '');
     
-    // Parse the r, g, b values
+    // parse the r, g, b values
     let r = parseInt(hex.substr(0, 2), 16);
     let g = parseInt(hex.substr(2, 2), 16);
     let b = parseInt(hex.substr(4, 2), 16);
@@ -85,7 +85,7 @@ function AboutSkills() {
           />
         </div>
 
-        {/* filtre par catégories */}
+        {/* filtre par categories */}
         <div className="category-filter">
           <button onClick={() => setCategoryFilter('All')}>All</button>
           <button onClick={() => setCategoryFilter('Frontend')}>Frontend</button>
@@ -96,7 +96,7 @@ function AboutSkills() {
         </div>
       </div>
 
-      {/* affichage des compétences filtrées */}
+      {/* affichage des competences filtrees */}
       <div className="ag-courses_box">
         {currentSkills.map((skill, index) => (
           <section key={index} className="ag-courses_item">

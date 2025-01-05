@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Teams.css';
-import teamImage from '/assets/about.png'; // Chemin relatif depuis le fichier
+import teamImage from '/assets/about.png'; 
 
 const Team = () => {
 
@@ -18,7 +18,7 @@ const Team = () => {
                             <div className="card__border-line"></div>
                             <div className="card__inner">
                                 <div className="card__img">
-                                    {/* Affichage de l'image importée */}
+                                    {/* affichage de l'image importée */}
                                     <div className="img__athlete">
                                         <img src={teamImage} alt="Team" />
                                     </div>

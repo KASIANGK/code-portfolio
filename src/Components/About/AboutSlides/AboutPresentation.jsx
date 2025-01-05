@@ -5,11 +5,11 @@ import { useTheme } from '../../../ThemeContext';
 function AboutPresentation() {
   const { isLightMode } = useTheme();
   
-  // États pour gérer les survols des différentes divs
+  // gerer les survols des differentes divs
   const [isHovered360, setIsHovered360] = useState(false);
   const [isHoveredPresentation, setIsHoveredPresentation] = useState(false);
 
-  // Fonction pour gérer l'activation des animations de survol
+  // activation des animations en hover
   const handleMouseEnter360 = () => setIsHovered360(true);
   const handleMouseLeave360 = () => setIsHovered360(false);
 
@@ -37,7 +37,7 @@ function AboutPresentation() {
         <p>Imagine a graphic designer and 3D artist who, after mastering the art of bringing ideas to life visually, decided to conquer the world of code. 👩‍💻</p>
       </div>
 
-      {/* Div glissante de gauche à droite pour .div-360 */}
+      {/* div glissante de gauche a droite */}
       <div className={`sliding-div sliding-div-left second-presentation ${isHovered360 ? 'active' : ''}`}>
         <div className='img-about-360'>
           <img src='/assets/ab2.png' alt='About' className='image-about' />
@@ -48,7 +48,7 @@ function AboutPresentation() {
         </div>
       </div>
 
-      {/* Div glissante de droite à gauche pour .presentation */}
+      {/* div glissante de droite a gauche */}
       <div className={`sliding-div sliding-div-right ${isHoveredPresentation ? 'active' : ''}`}>
         <div className='txt-about'>
           <img src='/assets/ab3.png' alt='About' className='image-about' />
@@ -64,47 +64,3 @@ function AboutPresentation() {
 }
 
 export default AboutPresentation;
-
-
-
-
-
-// import React, { useState, useRef } from 'react';
-// import './AboutPresentation.css';
-// import { useTheme } from '../../../ThemeContext';
-
-// function AboutPresentation() {
-//   const { isLightMode } = useTheme();
-//   const [isHovered, setIsHovered] = useState(false);  // État pour gérer le survol
-//   const aboutRef = useRef(null);  // Référence à la section complète
-
-//   // Fonction pour vérifier si la souris quitte la zone de l'image ou de la présentation
-//   const handleMouseEnter = () => setIsHovered(true);
-//   const handleMouseLeave = () => setIsHovered(false);
-
-//   return (
-//     <div
-//       ref={aboutRef}
-//       className={`about-presentation ${isLightMode ? 'light-mode' : 'dark-mode'}`}
-//       onMouseEnter={handleMouseEnter}  // Déclenche l'apparition de la div
-//       onMouseLeave={handleMouseLeave}   // Déclenche la disparition de la div
-//     >
-//       <div className='div-360'>
-//         <img src='/src/assets/about.png' alt='About' className='image-about' />
-//       </div>
-//       <div className='presentation'>
-//         <h1>HEY</h1>
-//         <p>I'm Kasia</p>
-//         <p>Imagine a graphic designer and 3D artist who, after mastering the art of bringing ideas to life visually, decided to conquer the world of code. 👩‍💻</p>
-//       </div>
-//       {/* La div glissante qui apparaît lors du survol */}
-//       <div className={`sliding-div ${isHovered ? 'active' : ''}`}>
-//         <h2>Additional Information</h2>
-//         <p>Here comes the sliding content!</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default AboutPresentation;
-

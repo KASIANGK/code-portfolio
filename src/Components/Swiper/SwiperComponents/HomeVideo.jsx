@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import darkModeVideo from '/assets/8.mp4';
+import darkModeVideo from '/public/assets/8.mp4';
 // import darkModeVideo from '../../assets/home.mp4';
 // import darkModeVideo from '../../assets/homeVideo.mp4';
 // import darkModeVideo from '../../assets/mainv.mp4';

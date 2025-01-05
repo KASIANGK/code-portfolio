@@ -8,8 +8,6 @@ import siri from '/assets/siri.png';
 import skills from '/assets/skills.png'
 
 
-// import logoGif from '../../assets/waving.gif'; 
-// import ModeSwitcher from './ModeSwitcher/ModeSwitcher';
 import { gsap, Power1 } from 'gsap';
 import '../Navbar/ModeSwitcher/ModeSwitcher.css'
 import { useTheme } from '../../ThemeContext';
@@ -19,14 +17,14 @@ function Navbar() {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [isLightModePop, setIsLightModePop] = useState(true); // Par défaut, mode clair
+  const [isLightModePop, setIsLightModePop] = useState(true); // mode par defaut
 
 
   const toggleLangMenu = () => {
     setIsLangMenuOpen(prevState => !prevState);
   };
 
-  // Fonction pour basculer l'état (ouvrir/fermer)
+  // fonction pour basculer l'etat (ouvrir/fermer)
   const toggleMenu = () => {
     setIsOpen(prevState => !prevState);
   };
@@ -71,7 +69,7 @@ function Navbar() {
   }, []);
   
 
-  // Fonction pour afficher la pop-up quand le mode clair est activé
+  // fonction pour afficher la pop-up quand le mode clair est active
   useEffect(() => {
     if (isLightMode) {
       setShowPopup(true);
@@ -79,11 +77,11 @@ function Navbar() {
         setShowPopup(false);
       }, 5000);
     }
-  }, [isLightMode]); // Cette fonction sera appelée chaque fois que isLightMode change
+  }, [isLightMode]); // fonction sera appelee chaque fois que isLightMode change
 
-  // Fonction pour basculer le mode
+  // fonction pour basculer le mode
   const handleModeChange = () => {
-    toggleMode(); // Change le mode
+    toggleMode(); // change le mode
   };
 
   return (
@@ -99,7 +97,7 @@ function Navbar() {
           <div className="bar"></div>
           <div className="bar"></div>
       </div>
-      {/* Affichage conditionnel du menu */}
+      {/* affichage conditionnel du menu */}
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <li>
           <Link to="/portfolio">

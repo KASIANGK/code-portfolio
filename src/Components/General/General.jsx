@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 import './General.css';
 
 const General = () => {
-    const [portfolioData, setPortfolioData] = useState([]); // Initialise le state comme un tableau vide
+    const [portfolioData, setPortfolioData] = useState([]); 
 
     useEffect(() => {
-        // Remplace par le chemin correct de ton fichier JSON ou ton API
-        axios.get('/src/data/portfolio.json')  // Assure-toi que le chemin est correct
+        axios.get('/src/data/portfolio.json')  
             .then((response) => {
-                console.log('Portfolio data:', response.data);  // Vérifie ce qui est retourné
-                setPortfolioData(response.data.portfolio);  // Set les données dans le state
+                console.log('portfolio data:', response.data);  
+                setPortfolioData(response.data.portfolio); 
             })
             .catch((error) => {
                 console.error('Oops, error fetching portfolio data', error);
@@ -28,10 +27,9 @@ const General = () => {
                         portfolioData.map((item) => (
                             <section key={item.id} className="ag-courses_item">
                                 <div className="ag-courses-item_link">
-                                    {/* Utilisation de l'image comme fond */}
                                     <div
                                         className="ag-courses-item_bg"
-                                        style={{ backgroundImage: `url(${item.image})` }}  // Applique l'image de fond
+                                        style={{ backgroundImage: `url(${item.image})` }}  
                                     ></div>
                                     <div className="ag-courses-item_title">{item.nom}</div>
                                     <div className="ag-courses-item_content" style={{ zIndex: 3 }}>
