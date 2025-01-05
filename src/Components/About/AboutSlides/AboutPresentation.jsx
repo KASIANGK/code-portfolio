@@ -25,7 +25,7 @@ function AboutPresentation() {
         onMouseEnter={handleMouseEnter360}
         onMouseLeave={handleMouseLeave360}
       >
-        <img src='/src/assets/ab1.png' alt='About' className='image-about' />
+        <img src='../src/assets/ab1.png' alt='About' className='image-about' />
       </div>
       <div
         className='presentation'
