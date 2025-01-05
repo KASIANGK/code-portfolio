@@ -11,6 +11,22 @@
     .about-presentation {
         flex-direction: column !important;
     }
+    .sliding-div {
+        flex-direction: column !important;
+    }
+    .txt-about {
+        flex-direction: column !important;
+    }
+    .txt-presentation {
+        width: 300px !important;
+    }
+    .presentation {
+        width: 300px !important;
+        margin-top: -30%;
+    }
+    .presentation-360 {
+        width: 300px !important;
+    }
 }
 
 .div-360 {

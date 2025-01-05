@@ -25,7 +25,7 @@ function AboutPresentation() {
         onMouseEnter={handleMouseEnter360}
         onMouseLeave={handleMouseLeave360}
       >
-        <img src='/src/assets/about.png' alt='About' className='image-about' />
+        <img src='/src/assets/ab1.png' alt='About' className='image-about' />
       </div>
       <div
         className='presentation'
@@ -38,9 +38,9 @@ function AboutPresentation() {
       </div>
 
       {/* Div glissante de gauche à droite pour .div-360 */}
-      <div className={`sliding-div sliding-div-left ${isHovered360 ? 'active' : ''}`}>
+      <div className={`sliding-div sliding-div-left second-presentation ${isHovered360 ? 'active' : ''}`}>
         <div className='img-about-360'>
-          <img src='/src/assets/bitmoji.png' alt='About' className='image-about-360' />
+          <img src='/src/assets/ab2.png' alt='About' className='image-about' />
         </div>
         <div className='presentation-360'>
           <p></p>
@@ -51,7 +51,7 @@ function AboutPresentation() {
       {/* Div glissante de droite à gauche pour .presentation */}
       <div className={`sliding-div sliding-div-right ${isHoveredPresentation ? 'active' : ''}`}>
         <div className='txt-about'>
-          <img src='/src/assets/bitmoji.png' alt='About' className='image-about-txt' />
+          <img src='/src/assets/ab3.png' alt='About' className='image-about' />
         </div>
         <div className='txt-presentation'>
           <p></p>
