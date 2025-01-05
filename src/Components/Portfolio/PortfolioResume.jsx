@@ -47,7 +47,7 @@ function PortfolioResume() {
                       <div key={idx} className="media-item">
                         {item.type === "video" && (
                           <video controls>
-                            <source src={item.src} type="video/mp4" />
+                            <source src='/assets/8.mp4' type="video/mp4" />
                           </video>
                         )}
                         {item.type === "pdf" && (
