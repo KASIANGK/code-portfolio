@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.css'; 
-import darkModeVideo from '../../assets/desktopgrain.mp4';
-import lightModeVideo from '../../assets/Automatic.mp4';
+import darkModeVideo from '/assets/desktopgrain.mp4';
+import lightModeVideo from '/assets/Automatic.mp4';
 import { useTheme } from '../../ThemeContext'; 
 
 import linkedinIcon from '/src/assets/linkk.png';  

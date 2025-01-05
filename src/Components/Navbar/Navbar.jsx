@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../assets/Sujet.png'; 
-import portfolio from '../../assets/folder.png'; 
-import about from '../../assets/about.png'; 
-import siri from '../../assets/siri.png'; 
-import skills from '../../assets/skills.png'
+import logo from '/assets/Sujet.png'; 
+import portfolio from '/assets/folder.png'; 
+import about from '/assets/about.png'; 
+import siri from '/assets/siri.png'; 
+import skills from '/assets/skills.png'
 
 
 // import logoGif from '../../assets/waving.gif'; 

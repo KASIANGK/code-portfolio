@@ -5,7 +5,7 @@ import portfolioData from '/src/data/portfolio.json';
 import skillsData from '/src/data/skills.json'; // Importez les skills ici
 import { useLocation } from 'react-router-dom';
 
-import videoFile from '/src/assets/switchpp.mp4';
+import videoFile from '/assets/switchpp.mp4';
 
 const PortfolioAll = () => {
     const [portfolio, setPortfolio] = useState([]);

@@ -3,7 +3,7 @@ import SwiperMain from '../Swiper/SwiperMain';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer'
 import './Home.css';
-import lightModee from '../../assets/transition-home.mp4';
+import lightModee from '/assets/transition-home.mp4';
 
 function Home() {
   const videoRef = useRef(null);  // Référence pour la vidéo

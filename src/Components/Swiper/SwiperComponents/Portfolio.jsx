@@ -105,8 +105,8 @@ import './Portfolio.css';
 import lightModeVideo from '/src/assets/transition-ah.mp4';
 import { Navigation, Pagination, Mousewheel } from 'swiper/modules'; 
 import PortfolioResume from '../../Portfolio/PortfolioResume';
-import teamHoverImage from '/src/assets/about.png';  // Remplace par le bon nom et extension
-import playersHoverImage from '/src/assets/about.png';  // Idem pour l'autre image
+import teamHoverImage from '/assets/about.png';  // Remplace par le bon nom et extension
+import playersHoverImage from '/assets/about.png';  // Idem pour l'autre image
 
 const Portfolio = () => {
   const { isLightMode } = useTheme();
