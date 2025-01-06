@@ -6,6 +6,7 @@ import portfolio from '/assets/folder.png';
 import about from '/assets/about.png'; 
 import siri from '/assets/siri.png'; 
 import skills from '/assets/skills.png'
+import home from '/assets/livres.png'
 
 
 import { gsap, Power1 } from 'gsap';
@@ -100,6 +101,11 @@ function Navbar() {
       {/* affichage conditionnel du menu */}
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <li>
+          <Link to="/home">
+            <img src={home} alt="Home" className="navbar-logo-gif" title="Home" />
+          </Link>
+        </li>
+        <li>
           <Link to="/portfolio">
             <img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" />
           </Link>
@@ -116,6 +122,11 @@ function Navbar() {
         </li>
       </ul>
       <ul className="navbar-links-second">
+        <li>
+          <Link to="/home">
+            <img src={home} alt="Home" className="navbar-logo-gif" title="Home" />
+          </Link>
+        </li>
         <li>
           <Link to="/portfolio">
             <img src={portfolio} alt="Portfolio" className="navbar-logo-gif" title="Portfolio" />
@@ -302,49 +313,3 @@ function Navbar() {
 
 export default Navbar;
 
-
-
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import './Navbar.css';
-// import logoGif from '../../assets/waving.gif'; 
-
-// function Navbar({ onToggleMode, isLightMode }) {
-//   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-
-//   const toggleLangMenu = () => {
-//     setIsLangMenuOpen(prevState => !prevState);
-//   };
-
-//   return (
-//     <nav className="navbar">
-//       <div className="navbar-logo">
-//         <Link to="/">
-//           <img src={logoGif} alt="Logo" className="navbar-logo-gif" />
-//         </Link>
-//       </div>
-//       <ul className="navbar-links">
-//         <li><Link to="/">Home</Link></li>
-//         <li><Link to="/about">About</Link></li>
-//         <li><Link to="/portfolio">Portfolio</Link></li>
-//         <li><Link to="/contact">Contact</Link></li>
-//         <li>
-//           <button onClick={onToggleMode} className="mode-button">
-//             {isLightMode ? 'Dark Mode' : 'Light Mode'}
-//           </button>
-//         </li>
-//         <li className="navbar-lang">
-//           <button onClick={toggleLangMenu} className="lang-button">🗣️</button>
-//           <div className={`lang-menu ${isLangMenuOpen ? 'open' : ''}`}>
-//             <p><a href="#">🇫🇷</a></p>
-//             <p><a href="#">🇬🇧</a></p>
-//             <p><a href="#">🇵🇱</a></p>
-//             <p><a href="#">🇳🇱</a></p>
-//           </div>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;

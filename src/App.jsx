@@ -11,6 +11,7 @@ import General from './Components/General/General';
 import PortfolioAll from './Components/Portfolio/PortfolioAll';
 import PortfolioDetails from './Components/Portfolio/PortfolioDetails';
 import AboutSkills from './Components/About/AboutSlides/AboutSkills';
+import WelcomeThree from './Components/WelcomeThreeJs/WelcomeThree';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home  />} />
+            <Route path="/" element={<WelcomeThree  />} />
+            <Route path="/home" element={<Home  />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />

@@ -1,0 +1,145 @@
+.custom-canvas {
+    display: block;
+    width: 100vw;  
+    height: 100vh !important; 
+    background: #5a5858;
+}
+  
+.mesh-hover {
+    cursor: pointer; 
+}
+  
+.text-wd {
+    z-index: 3;
+    font-size: 20px;
+}
+.txt-wd {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+.text-container {
+    /* position: absolute; */
+    left: 20px;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 200px; */
+    padding: 25px;
+    padding-top: 100px;
+  }
+
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-0px); /* Vous pouvez ajuster cette valeur selon la distance souhaitée */
+    }
+  }
+  
+  .text-container {
+    /* left: 20px; */
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-top: 150px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 119px;
+    /* padding-left: 5px; */
+    animation: moveLeft 5s ease-in-out forwards; 
+    /* background-image: url('/public/assets/ab2.png');
+    background-size: contain; */
+  }
+
+  .welcome-three {
+    background-image: url('/assets/ab2.png');
+    background-size: cover;
+  }
+
+
+ @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveFromLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .text-wd {
+    opacity: 0; /* Par défaut, le texte est invisible */
+    transform: translateX(-100px); /* Il commence en dehors de la vue */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+
+
+  .text-wd.visible {
+    opacity: 1;
+    transform: translateX(0); /* Animation de translation */
+    animation: pulse 1s ease-in-out forwards; /* Ajout de l'animation de pulsation */
+  }
+  
+
+
+
+
+  @media (max-width: 600px) {
+    .welcome-three {
+      flex-direction: column-reverse;
+    }
+  }
+  
+
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* .text-container {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    height: auto;
+  }
+  
+  .text-container.fade-out {
+    animation: fadeOut 2s forwards; 
+    height: auto;
+  } */
+  
