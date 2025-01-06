@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kasiangk.github.io/code-portfolio/",
+  "homepage": "https://KASIANGK.github.io/code-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
