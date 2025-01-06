@@ -5,4 +5,5 @@ export default defineConfig({
     assetsDir: 'assets',
   },
   assetsInclude: ['**/*.mp4', '**/*.webm'],
+  base : "/code-portfolio"
 });
