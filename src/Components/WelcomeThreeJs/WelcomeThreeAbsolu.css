@@ -1,0 +1,107 @@
+.custom-canvas {
+    display: block;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #5a5858;
+    position: relative; /* Ajouté pour que les éléments absolus se positionnent par rapport à cette div */
+}
+
+.text-container {
+    position: absolute; /* Permet de positionner la div par rapport à .custom-canvas */
+    left: 200px; /* Position à gauche de l'écran */
+    top: 50%; /* Centrage vertical */
+    transform: translateY(-50%); /* Correction pour le centrage vertical */
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: auto; /* Ajuste automatiquement la largeur selon le contenu */
+    animation: moveLeft 5s ease-in-out forwards;
+}
+
+.text-wd {
+    z-index: 3;
+    font-size: 20px;
+}
+
+.welcome-three {
+    background-image: url('/assets/ab2.png');
+    background-size: cover;
+    height: 100vh; /* Assurez-vous que la hauteur correspond */
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-0px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text-wd.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: pulse 1s ease-in-out forwards;
+}
+
+
+/* Assure que la div parent remplit toute la fenêtre */
+html, body, .custom-canevas {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style pour le canvas pour qu'il occupe toute la fenêtre */
+#canvas {
+    width: 100%;
+    height: 100%;
+    display: block; /* Supprime les espaces blancs causés par inline-block */
+    position: absolute; /* Permet de positionner text-container dessus */
+    top: 0;
+    left: 0;
+}
+
+/* Style pour positionner la text-container sur le canevas */
+.text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    z-index: 1; /* Assure que text-container soit au-dessus du canvas */
+    pointer-events: none; /* Permet de ne pas bloquer les événements de clic sur le canvas */
+}

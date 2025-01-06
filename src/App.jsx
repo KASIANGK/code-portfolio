@@ -12,6 +12,7 @@ import PortfolioAll from './Components/Portfolio/PortfolioAll';
 import PortfolioDetails from './Components/Portfolio/PortfolioDetails';
 import AboutSkills from './Components/About/AboutSlides/AboutSkills';
 import WelcomeThree from './Components/WelcomeThreeJs/WelcomeThree';
+import WelcomeThreeAbsolu from './Components/WelcomeThreeJs/WelcomeThreeAbsolu';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<WelcomeThree  />} />
+            {/* <Route path="/" element={<WelcomeThree  />} /> */}
+            <Route path="/" element={<WelcomeThreeAbsolu  />} />
             <Route path="/home" element={<Home  />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/about" element={<About />} />
